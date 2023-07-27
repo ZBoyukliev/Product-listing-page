@@ -1,8 +1,8 @@
-
-import './App.scss';
+import { FunctionComponent  } from 'react';
 import Header from './components/header/Header';
+import './App.scss';
 
-function App() {
+const App: FunctionComponent = () => {
 
 
   return (
@@ -12,6 +12,6 @@ function App() {
      <button className="btn btn-primary">Submit</button>
     </>
   );
-}
+};
 
 export default App;
