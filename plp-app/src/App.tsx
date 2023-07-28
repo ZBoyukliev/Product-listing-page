@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import './App.scss';
+import FilterComponent from './components/main/filter/Filter';
 
 const App: FunctionComponent = () => {
 
@@ -9,10 +10,8 @@ const App: FunctionComponent = () => {
   return (
     <div className='wrapper'>
       <Header />
-      <div className='main-div'>
-        <h2>hhhh</h2>
-        <h1>it works</h1>
-        <button className="btn btn-primary">Submit</button>
+      <div className='main-page'>
+        <FilterComponent />
       </div>
       <Footer />
     </div>

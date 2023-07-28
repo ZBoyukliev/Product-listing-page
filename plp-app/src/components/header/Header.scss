@@ -1,6 +1,28 @@
+@use '../../scss/custom' as *;
+@use '../../scss/mixins' as *;
 
-// .header {
-//     position: sticky;
-//     top: 0;
-//     left: 0;
-// }
+
+.navbar {
+    background: linear-gradient(to right,rgba($primary, 1),rgba($secondary, 1));
+  
+    .container {
+        a {
+            // overflow: hidden;
+            img {
+                height: 10%;
+                width: 8%;
+                object-fit: cover;
+                background-color: red;
+                color: red;
+                // background-color: transparent;
+            }
+        }
+        ul {
+            li {
+                .nav-link {
+                    color: white;
+                }
+            }
+        }
+    }
+}

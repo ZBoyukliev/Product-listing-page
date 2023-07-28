@@ -1,11 +1,12 @@
 import { FunctionComponent } from 'react';
+import './Footer.scss';
 
 const Footer: FunctionComponent = () => {
 
 
   return (
     <footer className="bg-light text-center text-lg-start">
-      <div className="container p-4">
+      <div className="container footer p-4">
         <div className="row">
           <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 className="text-uppercase">Footer Content</h5>
