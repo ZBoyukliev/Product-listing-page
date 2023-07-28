@@ -11,15 +11,17 @@ const App: FunctionComponent = () => {
 
 
   return (
-    <section className={styles['wrapper']}>
+    <section className={`${styles['wrapper']} `}>
       <Header />
-      <div className={styles['main-page']}>
+      <div className={`${styles['main-page']} row`}>
         <FilterComponent />
-        <div className={styles['heading']}>
-        <CategoryComponent />
-        <SorterComponent />
-        </div>
+        <div className={`${styles['heading']} col-9`}>
+          <div className='right-side row'>
+            <CategoryComponent />
+            <SorterComponent />
+          </div>
         <CatalogComponent />
+        </div>
       </div>
       <Footer />
     </section>

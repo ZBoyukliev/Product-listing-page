@@ -4,7 +4,7 @@ import './Filter.scss';
 const FilterComponent: FunctionComponent = () => {
 
     return (
-        <div className='filter-container'>
+        <div className='filter-container col-3'>
             <h5>Filter By:</h5>
             <form>
                 <div className="mb-3">

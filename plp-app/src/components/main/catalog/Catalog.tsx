@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 const CatalogComponent :FunctionComponent = () => {
   return (
 
-  <div className="container catalog">
+  <div className="container catalog col-9">
     <div className="row mb-4">
       {/* <!-- Product Item 1 --> */}
       <div className="col-md-4">

@@ -4,7 +4,7 @@ import './Sorter.scss';
 const SorterComponent: FunctionComponent = () => {
 
     return (
-        <div className="container sorter">
+        <div className="container sorter col-4">
             <div className="row">
                 <div className="col-sm-6 col-md-4 col-lg-3">
                     category: name

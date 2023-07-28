@@ -1,12 +1,10 @@
 @import './scss/custom.scss';
 
-.main-page {
-    height: 90vh;
-    padding-top: 70px;
-    display: flex;
-    .heading {
-        display: flex;
-        width: 80%;
-    };
-};
 
+.wrapper {
+    overflow: hidden;
+    .main-page {
+        height: 90vh;
+        padding-top: 70px;
+    }
+}
