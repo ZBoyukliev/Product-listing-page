@@ -20,7 +20,6 @@ const MainComponent: FunctionComponent = () => {
             })
             .then(data => {
                 setProducts(data);
-                console.log(data);
 
             })
             .catch(error => {
