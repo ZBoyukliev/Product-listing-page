@@ -1,18 +1,23 @@
 import { FunctionComponent } from 'react';
 import './Sorter.scss';
+import Product from '../../../types/Product';
 
-const SorterComponent: FunctionComponent = () => {
+type Props = {
+    products: Product[];
+}
+
+const SorterComponent: FunctionComponent<Props> = ({ products }) => {
 
     return (
         <div className="container sorter col-4">
-            <div className="row">
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                    category: name
+            {products.map(product => (
+                <div key={product._id} className="row">
+                    <div className="col-sm-6 col-md-4 col-lg-3">
+                        {/* category: {product.title} */}
+                    </div>
                 </div>
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                    category: desc
-                </div>
-            </div>
+            ))}
+
         </div>
     );
 };
