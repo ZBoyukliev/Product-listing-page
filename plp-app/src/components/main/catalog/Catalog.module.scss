@@ -1,15 +1,23 @@
+.catalog {
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
 
-.card-container {
-   
-    .card-main {
-        max-height: 520px;
-        padding-bottom: 20px;
-        overflow: hidden;
-        .card-img {
-            min-height: 320px;
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
+    .card-container {
+        justify-content: space-around;
+
+        .card-main {
+            width: 280px;
+            max-height: 520px;
+            padding-bottom: 20px;
+            overflow: hidden;
+
+            .card-img {
+                min-height: 320px;
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

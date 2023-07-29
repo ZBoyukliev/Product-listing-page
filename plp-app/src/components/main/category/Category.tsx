@@ -8,14 +8,18 @@ type Props = {
 
 const CategoryComponent: FunctionComponent<Props> = ({ products }) => {
 
-    let categoryType: string = '';
+    const firstProductWithCategory = products.find(product => product.category !== '');
 
-    products.map(product => {
-        categoryType == '' ? categoryType = product.category : '';
-    });
+    const categoryType: string = firstProductWithCategory?.category || '';
+    // let categoryType: string = '';
+
+    // products.map(product => {
+    //     categoryType = categoryType === '' ? product.category : categoryType;
+    //     console.log(categoryType);
+    //     categoryType == '' ? categoryType = product.category : '';
+    // });
 
     console.log(products);
-
 
     return (
         <div className="container category col-8">

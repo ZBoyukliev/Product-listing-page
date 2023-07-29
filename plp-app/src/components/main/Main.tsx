@@ -30,7 +30,7 @@ const MainComponent: FunctionComponent = () => {
     return (
         <div className={`${styles['main-page']} row`}>
             <FilterComponent />
-            <div className={`${styles['heading']} col-9`}>
+            <div className="col-9">
                 <div className='right-side row'>
                     <CategoryComponent products={products} />
                     <SorterComponent products={products} />
