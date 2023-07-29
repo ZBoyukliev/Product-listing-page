@@ -1,0 +1,13 @@
+
+.card-container {
+   
+    .card-main {
+        max-height: 520px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        .card-img {
+            min-height: 320px;
+            object-fit: cover;
+        }
+    }
+}
