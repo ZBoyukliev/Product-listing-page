@@ -1,30 +1,13 @@
 import { FunctionComponent } from 'react';
-import { useEffect, useState } from 'react';
-import Product from '../../../types/Product';
 import styles from './Catalog.module.scss';
+import Product from '../../../types/Product';
 
+type Props = {
+  products: Product[];
+}
 
-const CatalogComponent: FunctionComponent = () => {
+const CatalogComponent: FunctionComponent<Props> = ({ products }) => {
 
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3030/data/items')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setProducts(data);
-        console.log(data);
-
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
 
 
   return (
