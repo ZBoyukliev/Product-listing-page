@@ -1,24 +1,24 @@
 import { FunctionComponent  } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.scss';
+import styles from './Header.module.scss';
 
 
 const Header: FunctionComponent   = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg fixed-top">
-                <div className="container">
-                <a className="navbar-brand" href="#"><img src='/images/logo2.png'/></a>
+            <nav className={`${styles['nav-main']} navbar navbar-expand-lg fixed-top`}>
+                <div className={`${styles['nav-container']} container `}>
+                <a className="navbar-brand" href="#"><img src='/images/logoB1.png'/></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                    <div className={`${styles['nav-div-ul']} collapse navbar-collapse `} id="navbarSupportedContent">
+                        <ul className={`${styles['nav-ul']} navbar-nav me-auto mb-2 mb-lg-0 `}>
+                            <li className={`${styles['nav-ul-li']} nav-item`}>
                                 <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className={`${styles['nav-ul-li']} nav-item`}>
                                 <a className="nav-link" href="#">Link</a>
                             </li>
                             {/* <li className="nav-item dropdown">
@@ -32,10 +32,10 @@ const Header: FunctionComponent   = () => {
                                     <li><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li> */}
-                            <li className="nav-item">
+                            <li className={`${styles['nav-ul-li']} nav-item`}>
                                 <a className="nav-link " href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
                             </li>
-                            <li className="nav-item">
+                            <li className={`${styles['nav-ul-li']} nav-item`}>
                                 <a className="nav-link " href="#" tabIndex={-1}>Disabled</a>
                             </li>
                         </ul>

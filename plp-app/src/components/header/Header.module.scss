@@ -1,0 +1,35 @@
+@use '../../scss/custom' as *;
+@use '../../scss/mixins' as *;
+
+
+.nav-main {
+    background: linear-gradient(to right, rgba($primary, 1), rgba($secondary, 1));
+
+    .nav-container {
+        width: 100%;
+
+        a {
+            width: 20%;
+
+            // overflow: hidden;
+            img {
+                height: 18%;
+                width: 18%;
+                object-fit: cover;
+            }
+        }
+
+        .nav-div-ul {
+          
+            .nav-ul {
+                font-size: 20px;
+                justify-content: space-around;
+
+                .nav-ul-li {
+                    margin-left: 10px;
+                }
+            }
+
+        }
+    }
+}
