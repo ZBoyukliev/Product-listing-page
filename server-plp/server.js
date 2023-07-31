@@ -1334,7 +1334,7 @@
 
     var seedData = {
         items: {
-            
+            // BAGS--------------------------------------------------
             "fd436770-76c5-40e2-b231-77409eda7a61": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a61",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1402,10 +1402,74 @@
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a68",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "R1 Bag",
-                "category": "shoes",
+                "category": "bags",
                 "imageUrl": "/images/bags/bag-r1.webp",
                 "_createdOn": 1617194128648,
                 "price": 54.90,
+            },
+            // SHOES--------------------------------------------------------------------
+            "sh436770-76c5-40e2-b231-77409eda7a01": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a01",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Blue shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-blue.png",
+                "_createdOn": 2617194128601,
+                "price": 110.90,
+            },
+            "sh436770-76c5-40e2-b231-77409eda7a02": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a02",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Red shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-red.png",
+                "_createdOn": 2617194128602,
+                "price": 88.70,
+            },
+            "sh436770-76c5-40e2-b231-77409eda7a03": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a03",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "black-p shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-black-p.png",
+                "_createdOn": 2617194128603,
+                "price": 120.99,
+            },
+            "sh436770-76c5-40e2-b231-77409eda7a04": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a04",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "G shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-golden.png",
+                "_createdOn": 2617194128604,
+                "price": 99.99,
+            },
+            "sh436770-76c5-40e2-b231-77409eda7a05": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a05",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "retro shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-retro.png",
+                "_createdOn": 2617194128605,
+                "price": 112.99,
+            },
+            "sh436770-76c5-40e2-b231-77409eda7a06": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a06",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "barbie shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-pink.png",
+                "_createdOn": 2617194128606,
+                "price": 121.99,
+            },
+            "sh436770-76c5-40e2-b231-77409eda7a07": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a07",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "barbie shoes",
+                "category": "shoes",
+                "imageUrl": "/images/shoes/shoes-pink.png",
+                "_createdOn": 2617194128607,
+                "price": 112.99,
             },
         },
         comments: {
