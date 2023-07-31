@@ -1,8 +1,21 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, ReactNode  } from 'react';
+import Product from '../types/Product';
 
-export const ProductContext = createContext();
+export interface ProductContextType {
+  products: Product[];
+  isLoading: boolean;
+  err: boolean;
+  categoryType: string;
+  changeCategoryType: (newCategoryType: string) => void;
+}
 
-export const ProductProvider = ({children}) => {
+interface ProductProviderProps {
+  children: ReactNode;
+}
+
+export const ProductContext = createContext<ProductContextType | null>(null);
+
+export const ProductProvider = ({children}: ProductProviderProps) => {
 
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -51,7 +64,3 @@ export const ProductProvider = ({children}) => {
     );
 };
 
-
-// export const getAll = () => request.get(`${baseUrl}/menu`);
- 
-// export const getByCategory = (foodCategory) => request.get(`${baseUrl}/menu?where=category%3D%22${foodCategory}%22`);
