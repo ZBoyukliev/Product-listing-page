@@ -1,12 +1,18 @@
 import { FunctionComponent, useContext } from 'react';
-import { ProductContext } from '../../context/products';
+import { ProductContext, ProductContextType } from '../../context/products';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 
 const Header: FunctionComponent = () => {
 
-    const { changeCategoryType } = useContext(ProductContext);
+    const contextValue = useContext<ProductContextType | null>(ProductContext);
+
+    if (!contextValue) {
+        return <div>Loading...</div>;
+    }
+
+    const { changeCategoryType } = contextValue;
 
 
     return (
