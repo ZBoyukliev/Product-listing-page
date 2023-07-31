@@ -1,12 +1,19 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useContext} from 'react';
 import styles from './Catalog.module.scss';
-import Product from '../../../types/Product';
+import { ProductContext } from '../../../context/products';
+// import Product from '../../../types/Product';
 
-type Props = {
-  products: Product[];
-}
+// type Props = {
+//   products: Product[];
+// }
 
-const CatalogComponent: FunctionComponent<Props> = ({ products }) => {
+const CatalogComponent: FunctionComponent = () => {
+
+  const { categoryType, products } = useContext(ProductContext);
+
+  // const filteredProducts = products.filter(
+  //   (product) => product.category === categoryType
+  // );
 
   return (
 

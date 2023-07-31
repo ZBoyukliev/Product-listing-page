@@ -1402,7 +1402,7 @@
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a68",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "title": "R1 Bag",
-                "category": "bags",
+                "category": "shoes",
                 "imageUrl": "/images/bags/bag-r1.webp",
                 "_createdOn": 1617194128648,
                 "price": 54.90,

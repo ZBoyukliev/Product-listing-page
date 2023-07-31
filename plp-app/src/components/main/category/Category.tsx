@@ -1,25 +1,17 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useContext } from 'react';
+import { ProductContext } from '../../../context/products';
 import './Category.scss';
-import Product from '../../../types/Product';
+// import Product from '../../../types/Product';
 
-type Props = {
-    products: Product[];
-}
 
-const CategoryComponent: FunctionComponent<Props> = ({ products }) => {
+const CategoryComponent: FunctionComponent = () => {
 
-    const firstProductWithCategory = products.find(product => product.category !== '');
 
-    const categoryType: string = firstProductWithCategory?.category || '';
-    // let categoryType: string = '';
+    const { categoryType, products } = useContext(ProductContext);
 
-    // products.map(product => {
-    //     categoryType = categoryType === '' ? product.category : categoryType;
-    //     console.log(categoryType);
-    //     categoryType == '' ? categoryType = product.category : '';
-    // });
-
-    console.log(products);
+    const filteredProducts = products.filter(
+        (product) => product.category === categoryType
+      );
 
     return (
         <div className="container category col-8">
@@ -29,7 +21,7 @@ const CategoryComponent: FunctionComponent<Props> = ({ products }) => {
                     category: {categoryType}
                 </div>
                 <div className="col-sm-6 col-md-4 col-lg-3">
-                    counter: {products.length}
+                    counter: {filteredProducts.length}
                 </div>
             </div>
 
