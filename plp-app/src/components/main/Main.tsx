@@ -1,31 +1,25 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState, useEffect, useContext } from 'react';
 import FilterComponent from './filter/Filter';
 import CategoryComponent from './category/Category';
 import SorterComponent from './sort/Sorter';
 import CatalogComponent from './catalog/Catalog';
 import styles from './Main.module.scss';
+import { ProductContext, ProductContextType } from '../../context/products';
 // import Product from '../../types/Product';
 
 const MainComponent: FunctionComponent = () => {
-
-    // const [products, setProducts] = useState<Product[]>([]);
-    // let categoryType: string = 'bags';
-
-    // useEffect(() => {
-    //     fetch('http://localhost:3030/data/items')
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error('Network response was not ok');
-    //             }
-    //             return response.json();
-    //         })
-    //         .then(data => {
-    //             setProducts(data);
-    //         })
-    //         .catch(error => {
-    //             console.error('Error fetching data:', error);
-    //         });
-    // }, []);
+    const [visibleProducts, setVisibleProducts] = useState(5);
+    // const { categoryType } = useContext(ProductContext);
+    const contextValue = useContext<ProductContextType | null>(ProductContext);
+  
+    useEffect(() => {
+      setVisibleProducts(5); // Reset visibleProducts to 5 whenever the categoryType changes
+    }, [contextValue?.categoryType]);
+  
+    // Function to load more products when the "Load More" button is clicked
+    const handleLoadMore = () => {
+      setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 5);
+    };
 
     return (
         <div className={`${styles['main-page']} row`}>
@@ -35,7 +29,7 @@ const MainComponent: FunctionComponent = () => {
                     <CategoryComponent />
                     <SorterComponent />
                 </div>
-                <CatalogComponent />
+                <CatalogComponent visibleProducts={visibleProducts} onLoadMore={handleLoadMore} />
             </div>
         </div>
     );

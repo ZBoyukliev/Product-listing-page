@@ -15,7 +15,6 @@ const CategoryComponent: FunctionComponent = () => {
     const filteredProducts = products ? products.filter(
         (product) => product.category === categoryType
     ) : [];
-
     return (
         <div className="container category col-8">
             <div className="row">
