@@ -11,18 +11,6 @@ interface CatalogComponentProps {
 const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visibleProducts, onLoadMore }) => {
 
   const contextValue = useContext<ProductContextType | null>(ProductContext);
-  // const [visibleProducts, setVisibleProducts] = useState(5);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   if (contextValue?.products && contextValue.products.length > 0) {
-  //     setLoading(false);
-  //   }
-  // }, [contextValue]);
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
 
   if (!contextValue) {
     return <div>No products available</div>;
@@ -30,13 +18,6 @@ const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visiblePro
 
   const { products } = contextValue;
 
-
-  // Function to load more products when the "Load More" button is clicked
-  // const handleLoadMore = () => {
-  //   setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 5);
-  // };
-
-  // Filter the products based on the number of visible products
   const filteredProducts = products.slice(0, visibleProducts);
   return (
 
