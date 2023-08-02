@@ -19,6 +19,9 @@ const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visiblePro
   const { products } = contextValue;
 
   const filteredProducts = products.slice(0, visibleProducts);
+
+
+
   return (
 
     <div className={`${styles['catalog']} container col-9`}>

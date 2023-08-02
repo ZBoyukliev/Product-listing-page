@@ -29,7 +29,7 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({visiblePr
                     category: {categoryType}
                 </div>
                 <div className="col-sm-6 col-md-4 col-lg-3">
-                counter: {visibleProducts} out of {displayedProductsCount}
+                counter: {displayedProductsCount >=5 ? visibleProducts : displayedProductsCount} out of {displayedProductsCount}
                 </div>
             </div>
         </div>

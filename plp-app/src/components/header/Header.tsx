@@ -43,10 +43,10 @@ const Header: FunctionComponent = () => {
                                 </ul>
                             </li> */}
                             <li className={`${styles['nav-ul-li']} nav-item`}>
-                                <Link to="/" className="nav-link" aria-current="page" >WATCHES</Link>
+                                <Link onClick={() => changeCategoryType('watches')} to="/" className="nav-link" aria-current="page" >WATCHES</Link>
                             </li>
                             <li className={`${styles['nav-ul-li']} nav-item`}>
-                                <Link to="/" className="nav-link" aria-current="page" >SUNGLASSES</Link>
+                                <Link onClick={() => changeCategoryType('sunglasses')} to="/" className="nav-link" aria-current="page" >SUNGLASSES</Link>
                             </li>
                         </ul>
 

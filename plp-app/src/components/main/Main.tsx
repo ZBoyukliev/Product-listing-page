@@ -1,3 +1,5 @@
+
+
 import { FunctionComponent, useState, useEffect, useContext } from 'react';
 import FilterComponent from './filter/Filter';
 import CategoryComponent from './category/Category';
@@ -7,17 +9,22 @@ import styles from './Main.module.scss';
 import { ProductContext, ProductContextType } from '../../context/products';
 
 const MainComponent: FunctionComponent = () => {
-    const [visibleProducts, setVisibleProducts] = useState(5);
-    const contextValue = useContext<ProductContextType | null>(ProductContext);
+    
+  const contextValue = useContext<ProductContextType | null>(ProductContext);
+  const { products } = contextValue;
+  const [visibleProducts, setVisibleProducts] = useState(5);
   
     useEffect(() => {
-      setVisibleProducts(5); // Reset visibleProducts to 5 whenever the categoryType changes
+      // if(visibleProducts > contextValue?.products.length) {
+      //   setVisibleProducts(contextValue?.products.length);
+      // }
+      setVisibleProducts(5);
     }, [contextValue?.categoryType]);
   
     const handleLoadMore = () => {
-        setVisibleProducts((prevVisibleProducts) =>
-            Math.min(prevVisibleProducts + 5, contextValue?.products.length || 0)
-        );
+      setVisibleProducts((prevVisibleProducts) =>
+        Math.min(prevVisibleProducts + 5, contextValue?.products.length || 0)
+      );
     };
 
     return (
@@ -28,7 +35,10 @@ const MainComponent: FunctionComponent = () => {
                     <CategoryComponent visibleProducts={visibleProducts}/>
                     <SorterComponent />
                 </div>
-                <CatalogComponent visibleProducts={visibleProducts} onLoadMore={handleLoadMore} />
+                <CatalogComponent
+                 visibleProducts={visibleProducts} 
+                 onLoadMore={handleLoadMore}
+                 />
             </div>
         </div>
     );

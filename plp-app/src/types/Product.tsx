@@ -3,6 +3,7 @@ interface Product {
     title: string;
     description: string;
     category:string;
+    color:string;
     price: number;
     discountedPrice?: number;
     rating: number;
