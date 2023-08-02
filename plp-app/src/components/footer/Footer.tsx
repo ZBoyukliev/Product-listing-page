@@ -1,8 +1,12 @@
 import { FunctionComponent } from 'react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import styles from  './Footer.module.scss';
 
 const Footer: FunctionComponent = () => {
-
+  
+  // library.add(faFacebook ); // Add any other Font Awesome icons you need here
 
   return (
     <footer className={`${styles['foot-main']} text-center text-lg-start`}>
