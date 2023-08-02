@@ -1,0 +1,5 @@
+@use './custom' as *;
+
+.btn {
+    background: linear-gradient(to right, rgba($primary, 1), rgba($secondary, 1));
+}

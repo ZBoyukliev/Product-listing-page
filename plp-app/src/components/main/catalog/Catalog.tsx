@@ -35,7 +35,7 @@ const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visiblePro
                 <p className="card-text">{product.description}</p>
                 <p className="card-text">Price: {product.discountedPrice ? <del>${product.price}</del> : `$${product.price}`}</p>
                 <p className="card-text">Rating: {product.rating} stars</p>
-                <button className="btn btn-success">Add to Cart</button>
+                <button className={`${styles['btn']}`}>Add to Cart</button>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visiblePro
       </div>
       {visibleProducts < products.length && (
         <div className="text-center">
-          <button className="btn btn-primary mb-5" onClick={onLoadMore}>
+          <button className={`${styles['btn']} mb-5`} onClick={onLoadMore}>
             MORE RESULTS
           </button>
         </div>
