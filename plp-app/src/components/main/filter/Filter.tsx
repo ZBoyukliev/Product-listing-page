@@ -15,7 +15,7 @@ const FilterComponent: FunctionComponent = () => {
   const {handleSelectedColorsChange} = productContext;
 
   return (
-    <div className='filter-container col-3'>
+    <div className='filter-container col-3 m-4'>
       <h5>Filter By:</h5>
       {/* <form> */}
       <div className="mb-3">
