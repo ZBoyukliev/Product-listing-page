@@ -7,7 +7,7 @@ interface CategoryComponentProps {
 }
 
 
-const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({visibleProducts}) => {
+const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleProducts }) => {
     const productContext = useContext(ProductContext);
 
     if (!productContext) {
@@ -26,11 +26,12 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({visiblePr
         <div className="container category col-8">
             <div className="row">
                 <div className="col-sm-6 col-md-4 col-lg-3">
-                    category: {categoryType}
+                    <h1>{categoryType.toUpperCase()} </h1>
                 </div>
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                counter: {displayedProductsCount >=5 ? visibleProducts : displayedProductsCount} out of {displayedProductsCount}
-                </div>
+
+            </div>
+            <div className="col-sm-6 col-md-4 col-lg-3">
+                {displayedProductsCount >= 5 ? visibleProducts : displayedProductsCount} out of {displayedProductsCount} products
             </div>
         </div>
     );
