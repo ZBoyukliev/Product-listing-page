@@ -28,7 +28,7 @@ const MainComponent: FunctionComponent = () => {
         <div className={`${styles['main-page']} row`}>
             <FilterComponent />
             <div className="col-9">
-                <div className='right-side row'>
+                <div className={`${'right-s'} row mt-3 mb-2`}>
                     <CategoryComponent visibleProducts={visibleProducts}/>
                     <SorterComponent />
                 </div>
