@@ -43,8 +43,8 @@ const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visiblePro
       </div>
       {visibleProducts < products.length && (
         <div className="text-center">
-          <button className="btn btn-primary" onClick={onLoadMore}>
-            Load More
+          <button className="btn btn-primary mb-5" onClick={onLoadMore}>
+            MORE RESULTS
           </button>
         </div>
       )}
