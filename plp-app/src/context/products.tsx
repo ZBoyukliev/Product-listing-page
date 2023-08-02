@@ -8,6 +8,7 @@ export interface ProductContextType {
   categoryType: string;
   filteredProducts: Product[];
   changeCategoryType: (newCategoryType: string) => void;
+  sortProducts: (newCategoryType: string) => void;
   setFilteredProducts: React.Dispatch<SetStateAction<Product[]>>;
   handleSelectedColorsChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -75,6 +76,26 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     }
   };
 
+  const sortProducts = (sortOption: string) => {
+    switch (sortOption) {
+      case 'name_asc':
+        setFilteredProducts([...filteredProducts].sort((a, b) => a.title.localeCompare(b.title)));
+        break;
+      case 'name_desc':
+        setFilteredProducts([...filteredProducts].sort((a, b) => b.title.localeCompare(a.title)));
+        break;
+      case 'price_asc':
+        setFilteredProducts([...filteredProducts].sort((a, b) => a.price - b.price));
+        break;
+      case 'price_desc':
+        setFilteredProducts([...filteredProducts].sort((a, b) => b.price - a.price));
+        break;
+      default:
+        // If no option is selected or an invalid option is selected, do nothing
+        break;
+    }
+  };
+
 
   return (
     <ProductContext.Provider
@@ -86,7 +107,8 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         filteredProducts,
         changeCategoryType,
         setFilteredProducts,
-        handleSelectedColorsChange
+        handleSelectedColorsChange,
+        sortProducts,
       }}
     >
       {children}

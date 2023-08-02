@@ -22,7 +22,13 @@ const FilterComponent: FunctionComponent = () => {
         <label htmlFor="colorFilter" className="form-label">Color:</label>
         <div>
           <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} type="checkbox" value='red' className="form-check-input" id="red" />
+            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)}
+             type="checkbox"
+              value='red' 
+              className="form-check-input" 
+              id="red" 
+              // checked={colors.includes(color)}
+              />
             <label className="form-check-label" htmlFor="red">Red</label>
           </div>
           <div className="form-check">

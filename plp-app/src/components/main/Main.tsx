@@ -11,13 +11,10 @@ import { ProductContext, ProductContextType } from '../../context/products';
 const MainComponent: FunctionComponent = () => {
     
   const contextValue = useContext<ProductContextType | null>(ProductContext);
-  const { products } = contextValue;
+  // const { products } = contextValue;
   const [visibleProducts, setVisibleProducts] = useState(5);
   
     useEffect(() => {
-      // if(visibleProducts > contextValue?.products.length) {
-      //   setVisibleProducts(contextValue?.products.length);
-      // }
       setVisibleProducts(5);
     }, [contextValue?.categoryType]);
   
