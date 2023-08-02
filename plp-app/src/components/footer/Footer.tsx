@@ -1,11 +1,11 @@
 import { FunctionComponent } from 'react';
-import './Footer.scss';
+import styles from  './Footer.module.scss';
 
 const Footer: FunctionComponent = () => {
 
 
   return (
-    <footer className="bg-light text-center text-lg-start">
+    <footer className={`${styles['foot-main']} text-center text-lg-start`}>
       <div className="container footer p-4">
         <div className="row">
           <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -19,13 +19,13 @@ const Footer: FunctionComponent = () => {
             <h5 className="text-uppercase">Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Link 1</a>
+                <a href="https://www.facebook.com/">facebook</a>
               </li>
               <li>
-                <a href="#!">Link 2</a>
+                <a href="https://twitter.com/">twitter</a>
               </li>
               <li>
-                <a href="#!">Link 3</a>
+                <a href="https://www.instagram.com/">instagram</a>
               </li>
             </ul>
           </div>
@@ -34,13 +34,13 @@ const Footer: FunctionComponent = () => {
             <h5 className="text-uppercase">Contact</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Email</a>
+                plp.gmail.com
               </li>
               <li>
-                <a href="#!">Phone</a>
+               +359 898 000 999
               </li>
               <li>
-                <a href="#!">Address</a>
+                bul. Ivan Vazov 188 Sofia
               </li>
             </ul>
           </div>

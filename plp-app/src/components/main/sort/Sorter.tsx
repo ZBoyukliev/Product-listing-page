@@ -18,9 +18,9 @@ const SorterComponent: FunctionComponent = () => {
       <h5>Sort By:</h5>
 
       <div className="mb-3">
-        <label htmlFor="sortingOption" className="form-label">
+        {/* <label htmlFor="sortingOption" className="form-label">
           Sort Option:
-        </label>
+        </label> */}
         <select
           className="form-select"
           id="sortingOption"
