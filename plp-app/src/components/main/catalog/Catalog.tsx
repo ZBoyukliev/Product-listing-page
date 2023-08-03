@@ -2,14 +2,15 @@ import { FunctionComponent, useContext } from 'react';
 import styles from './Catalog.module.scss';
 import { ProductContext } from '../../../context/products';
 import { ProductContextType } from '../../../context/models/ContextModel';
+import CatalogTyleComponent from './catalogTyle/CatalogTyle';
 
-interface CatalogComponentProps {
+type Props = {
   visibleProducts: number;
   onLoadMore: () => void;
 }
 
 
-const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visibleProducts, onLoadMore }) => {
+const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMore }) => {
 
   const contextValue = useContext<ProductContextType | null>(ProductContext);
 
@@ -21,26 +22,11 @@ const CatalogComponent: FunctionComponent<CatalogComponentProps> = ({ visiblePro
 
   const filteredProducts = products.slice(0, visibleProducts);
 
-
-
   return (
 
     <div className={`${styles['catalog']} container col-9`}>
       <div className="row mb-4">
-        {filteredProducts.map(product => (
-          <div key={product._id} className={`${styles['card-container']} col-md-4`}>
-            <div className={`${styles['card-main']} card m-4`}>
-              <img src={product.imageUrl} alt={product.title} className={`${styles['card-img']} card-img-top`} />
-              <div className="card-body">
-                <h5 className="card-title">{product.title}</h5>
-                <p className="card-text">{product.description}</p>
-                <p className="card-text">Price: {product.discountedPrice ? <del>${product.price}</del> : `$${product.price}`}</p>
-                <p className="card-text">Rating: {product.rating} stars</p>
-                <button className={`${styles['btn']}`}>Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        ))}
+       {filteredProducts.map(product => <CatalogTyleComponent key={product._id} product={product}/>)}
       </div>
       {visibleProducts < products.length && (
         <div className="text-center">
