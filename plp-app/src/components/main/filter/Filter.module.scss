@@ -3,6 +3,16 @@
 .filter-main {
     width: 20%;
     height: 100%;
+    .filter-contain {
+        margin: 0 auto;
+        .filter-colors {
+           padding: 0 30px;
+        }
+       
+    }
+    .filter-prices {
+        padding: 0 30px;
+     }
     .color-red {
         color: red;
     }

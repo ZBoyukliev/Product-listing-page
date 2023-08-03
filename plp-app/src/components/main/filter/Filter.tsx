@@ -14,10 +14,10 @@ const FilterComponent: FunctionComponent = () => {
 
   return (
     <div className={`${styles['filter-main']} filter-container col-3 m-4`}>
-      <h5>Filter By:</h5>
-      <div className="mb-3">
+      <h3>FILTER BY:</h3>
+      <div className={`${styles['filter-contain']} mb-3`}>
         <label htmlFor="colorFilter" className="form-label">Color:</label>
-        <div>
+        <div className={`${styles['filter-colors']} mb-3`}>
 
           <div className="form-check">
             <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} type="checkbox" value='black' className="form-check-input" id="black" />
@@ -58,7 +58,7 @@ const FilterComponent: FunctionComponent = () => {
 
       <div className="mb-3">
         <label htmlFor="priceFilter" className="form-label">Price:</label>
-        <div>
+        <div className={`${styles['filter-prices']}`}>
           <div className="form-check">
             <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleMaximumPriceSelect(e)} type="checkbox" className="form-check-input" value={50} id="priceLow" />
             <label className="form-check-label" htmlFor="priceLow">Low</label>
