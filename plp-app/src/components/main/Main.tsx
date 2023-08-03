@@ -25,8 +25,10 @@ const MainComponent: FunctionComponent = () => {
 
     return (
         <div className={`${styles['main-page']} row`}>
+          <div className={`${styles['filter-component']} shadow col-12 col-md-3`}>
             <FilterComponent />
-            <div className="col-9">
+          </div>
+            <div className="col-12 col-md-9">
                 <div className={`${'right-s'} row mt-3 mb-2`}>
                     <CategoryComponent visibleProducts={visibleProducts}/>
                     <SorterComponent />

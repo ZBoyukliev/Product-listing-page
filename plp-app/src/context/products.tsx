@@ -1,28 +1,27 @@
-import React, { createContext, useEffect, useState, ReactNode } from 'react';
+import  { createContext, useEffect, useState, ReactNode } from 'react';
 import Product from '../types/Product';
 import { SortingOrder } from './models/SortingOrder';
 import { ProductContextType } from './models/ContextModel';
 import { Filter } from './models/filter';
-
-
+ 
 interface ProductProviderProps {
   children: ReactNode;
 }
-
+ 
 export const ProductContext = createContext<ProductContextType | null>(null);
-
+ 
 export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [err, setErr] = useState<boolean>(false);
   const [categoryType, setCategoryType] = useState<string>('bags');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-
+ 
   const [filters, setFilters] = useState<Filter>({ colors: [], price: 0 });
-
+ 
   useEffect(() => {
     setIsLoading(true);
-
+ 
     fetch(`http://localhost:3030/data/items?where=category%3D%22${categoryType}%22`)
       .then((response) => {
         if (!response.ok) {
@@ -41,52 +40,46 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setProducts([]);
       });
   }, [categoryType, filters.colors, filters.price]);
-
-  
+ 
+ 
   const checkFilteredItems = (data: Product[]) => {
     if (filters.colors.length > 0) {
       const filteredData = data.filter((product) => filters.colors.find((color) => product.color === color));
       if (filters.price > 0) {
-        const items = filteredData.filter((product) => (product.discountPrice ? product.discountPrice : product.price) <= filters.price);
+        const items = filteredData.filter((product) => product.price <= filters.price);
         setProducts(items);
       } else {
         setProducts(filteredData);
       }
-    } else if (filters.price > 0  ) {
-      const items = data.filter((product) => (product.discountPrice ? product.discountPrice : product.price) <= filters.price);
+    } else if (filters.price > 0 ) {
+      const items = data.filter((product) => product.price <= filters.price);
       setProducts(items);
-    } 
-    else {
+    } else {
       setProducts(data);
     }
   };
-
+ 
   const changeCategoryType = (newCategoryType: string) => {
     setCategoryType(newCategoryType);
   };
-
-  const handleSelectedColorsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.checked) {
-      const color = e.target.value;
+ 
+  const handleSelectedColorsChange = (color: string) => {
+    if (filters.colors.includes(color)) {
+      const updatedColors = filters.colors.filter(c => c !== color);
+      setFilters({ ...filters, colors: updatedColors });
+  } else {
       setFilters({ ...filters, colors: [...filters.colors, color] });
-
-    } else {
-      const color = e.target.value;
-      const filteredColors = filters.colors.filter((value) => value !== color);
-      setFilters({ ...filters, colors: filteredColors });
-    }
+  }
   };
-
-  const handleMaximumPriceSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.checked) {
-      const value = e.target.value;
-      setFilters({ ...filters, price: Number(value) });
-
-    } else {
-      setFilters({ ...filters, price: 0 });
-    }
+ 
+  const handleMaximumPriceSelect = (price:number) => {
+    setFilters({ ...filters, price: filters.price === price ? 0 : price });
   };
-
+ 
+  const handleResetFilters = () => {
+    setFilters({colors:[], price:0});
+  }
+ 
   const sortProducts = (sortOption: string) => {
     switch (sortOption) {
       case SortingOrder.NAME_ASC:
@@ -103,12 +96,13 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         break;
     }
   };
-
-
+ 
+ 
   return (
     <ProductContext.Provider
       value={{
         products,
+        filters,
         isLoading,
         err,
         categoryType,
@@ -117,7 +111,8 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setFilteredProducts,
         handleSelectedColorsChange,
         sortProducts,
-        handleMaximumPriceSelect
+        handleMaximumPriceSelect,
+        handleResetFilters
       }}
     >
       {children}

@@ -1,7 +1,9 @@
 import React, { SetStateAction } from 'react';
 import Product from '../../types/Product';
-
+import { Filter } from './filter';
+ 
 export interface ProductContextType {
+  filters: Filter;
     products: Product[];
     isLoading: boolean;
     err: boolean;
@@ -10,6 +12,7 @@ export interface ProductContextType {
     changeCategoryType: (newCategoryType: string) => void;
     sortProducts: (newCategoryType: string) => void;
     setFilteredProducts: React.Dispatch<SetStateAction<Product[]>>;
-    handleSelectedColorsChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    handleMaximumPriceSelect:(e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleSelectedColorsChange: (color:string) => void;
+    handleMaximumPriceSelect:(price:number) => void;
+    handleResetFilters: () => void;
   }

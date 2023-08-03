@@ -1,80 +1,137 @@
-
-import React, { FunctionComponent, useContext } from 'react';
-import styles from './Filter.module.scss';
-import { ProductContext } from '../../../context/products';
-import { ProductContextType } from '../../../context/models/ContextModel';
-
+import  { FunctionComponent, useContext } from "react";
+import styles from "./Filter.module.scss";
+import { ProductContext } from "../../../context/products";
+import { ProductContextType } from "../../../context/models/ContextModel";
+ 
 const FilterComponent: FunctionComponent = () => {
-  const productContext = useContext<ProductContextType | null>(ProductContext);
-  if (!productContext) {
-    return <div>Loading...</div>;
-  }
-
-  const { handleSelectedColorsChange, handleMaximumPriceSelect } = productContext;
-
-  return (
-    <div className={`${styles['filter-main']} filter-container col-3 m-4`}>
-      <h3>FILTER BY:</h3>
-      <div className={`${styles['filter-contain']} mb-3`}>
-        <label htmlFor="colorFilter" className="form-label">Color:</label>
-        <div className={`${styles['filter-colors']} mb-3`}>
-
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} type="checkbox" value='black' className="form-check-input" id="black" />
-            <label className={`${styles['color-black']} form-check-label`} htmlFor="black">Black</label>
+    const productContext = useContext<ProductContextType | null>(ProductContext);
+    if (!productContext) {
+        return <div>Loading...</div>;
+    }
+ 
+    const { filters, handleSelectedColorsChange, handleMaximumPriceSelect, handleResetFilters } = productContext;
+ 
+    return (
+        <aside className={`${styles["filter-main"]} pt-3`}>
+          <div className="d-flex align-items-end justify-content-between">
+          <h2 className="px-3 py-1">FILTER </h2>  
+          <p className={styles['reset-x']} onClick={handleResetFilters}>Reset X</p>
           </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} value='white' type="checkbox" className="form-check-input" id="blue" />
-            <label className={`${styles['color-white']} form-check-label`} htmlFor="blue">White</label>
-          </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} value='blue' type="checkbox" className="form-check-input" id="blue" />
-            <label className={`${styles['color-blue']} form-check-label`} htmlFor="blue">Blue</label>
-          </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)}
-              type="checkbox"
-              value='red'
-              className="form-check-input"
-              id="red"
-            />
-            <label className={`${styles['color-red']} form-check-label`} htmlFor="red">Red</label>
-          </div>
-    
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} value='brown' type="checkbox" className="form-check-input" id="blue" />
-            <label className={`${styles['color-brown']} form-check-label`} htmlFor="blue">Brown</label>
-          </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} value='pink' type="checkbox" className="form-check-input" id="blue" />
-            <label className={`${styles['color-pink']} form-check-label`} htmlFor="blue">Pink</label>
-          </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSelectedColorsChange(e)} value='gray' type="checkbox" className="form-check-input" id="blue" />
-            <label className={`${styles['color-gray']} form-check-label`} htmlFor="blue">Gray</label>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-3">
-        <label htmlFor="priceFilter" className="form-label">Price:</label>
-        <div className={`${styles['filter-prices']}`}>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleMaximumPriceSelect(e)} type="checkbox" className="form-check-input" value={100} id="priceLow" />
-            <label className="form-check-label" htmlFor="priceLow">Low</label>
-          </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleMaximumPriceSelect(e)} type="checkbox" className="form-check-input" value={200} id="priceMedium" />
-            <label className="form-check-label" htmlFor="priceMedium">Medium</label>
-          </div>
-          <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleMaximumPriceSelect(e)} type="checkbox" className="form-check-input" value={500} id="priceHigh" />
-            <label className="form-check-label" htmlFor="priceHigh">High</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+            <div className="accordion accordion-flush" id="accordionFlushExample">
+                <div className="accordion-item">
+                    <h2 className="accordion-header">
+                        <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseTwo"
+                        >
+                            Color
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <ul>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("black")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('black') && styles['selected']} d-flex justify-content-between align-items-center btn`}  > 
+                              Black  
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("blue")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('blue') && styles['selected']} d-flex justify-content-between align-items-center btn`} >  
+                              Blue   
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("red")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('red') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Red 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("brown")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('brown') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Brown 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("pink")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('pink') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Pink 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("gray")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('gray') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Gray 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header">
+                        <button
+                            className="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseThree"
+                        >
+                            Price
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <ul>
+                          <li>
+                            <button 
+                            onClick={() => handleMaximumPriceSelect(100)}
+                            className={`${styles['filtered-button']} ${filters.price === 100 && styles['selected']} d-flex justify-content-between align-items-center btn`}  >
+                              Low  
+                              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                              </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleMaximumPriceSelect(299)}
+                            className={`${styles['filtered-button']} ${filters.price === 299 && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Medium 
+                              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                              </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleMaximumPriceSelect(300)}
+                            className={`${styles['filtered-button']} ${filters.price === 300 && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              High 
+                              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                              </button>
+                          </li>
+ 
+ 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+ 
+        </aside>
+    );
 };
-
+ 
 export default FilterComponent;

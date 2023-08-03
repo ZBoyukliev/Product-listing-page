@@ -32,3 +32,17 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+   .nav-main {
+    .nav-container {
+        .nav-div-ul{
+          .nav-ul{
+           align-items: end;
+           
+          }
+        }
+    }
+   }
+   
+}

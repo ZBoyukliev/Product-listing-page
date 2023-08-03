@@ -1,37 +1,34 @@
 
-
+@import '../../../scss/custom';
+ 
 .filter-main {
-    width: 20%;
+    // width: 20%;
     height: 100%;
-    .filter-contain {
-        margin: 0 auto;
-        .filter-colors {
-           padding: 0 30px;
+    .reset-x:hover {
+        cursor: pointer;
+    }
+    ul {
+        padding-left: 8px;
+        li {
+            list-style-type: none;
+            width: 100%;
+            button {
+                width: 100%;
+                font-size: 20px;
+                svg {
+                    display: none;
+                }
+                &.selected {
+                background-color: $gray-400;
+ 
+                    svg {
+                        display:block;
+                    }
+                }
+            }
+            button:hover {
+                background-color: $gray-400;
+            }
         }
-       
-    }
-    .filter-prices {
-        padding: 0 30px;
-     }
-    .color-red {
-        color: red;
-    }
-    .color-blue {
-        color: blue;
-    }
-    .color-black {
-        color: black;
-    }
-    .color-pink {
-        color: rgb(241, 149, 164);
-    }
-    .color-brown {
-        color: brown;
-    }
-    .color-white {
-        color: rgb(35, 35, 35);
-    }
-    .color-gray {
-        color: gray;
     }
 }
