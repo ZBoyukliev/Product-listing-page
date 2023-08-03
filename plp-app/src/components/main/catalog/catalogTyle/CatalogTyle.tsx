@@ -30,7 +30,8 @@ const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
                     <div className="card-body">
                         <h5 className="card-title">{product.title}</h5>
                         <p className="card-text">{product.description}</p>
-                        <p className="card-text">Price: {product.discountedPrice ? <del>${product.price}</del> : `$${product.price}`}</p>
+                        <p className="card-text">Price: {product.discountPrice ? <del>${product.price.toFixed(2)}</del> : `$${product.price.toFixed(2)}`}</p>
+                        {product.discountPrice && <p className="card-text">Discount Price: {`$ ${product.discountPrice?.toFixed(2)}`}</p>}
                         <p className="card-text">Rating: {product.rating} stars</p>
                         <button className={`${styles['btn']}`} onClick={handleAddToCart}>Add to Cart</button>
                     </div>

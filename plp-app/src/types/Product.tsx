@@ -5,7 +5,7 @@ interface Product {
     category:string;
     color:string;
     price: number;
-    discountedPrice?: number;
+    discountPrice?: number;
     rating: number;
     imageUrl: string;
   }
