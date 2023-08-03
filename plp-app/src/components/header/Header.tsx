@@ -1,5 +1,6 @@
 import { FunctionComponent, useContext } from 'react';
-import { ProductContext, ProductContextType } from '../../context/products';
+import { ProductContext } from '../../context/products';
+import { ProductContextType } from '../../context/models/ContextModel';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
