@@ -17,8 +17,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [err, setErr] = useState<boolean>(false);
   const [categoryType, setCategoryType] = useState<string>('bags');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-  // const [colors, setColors] = useState<string[]>([]);
-  // const [price, setPrice] = useState(0);
 
   const [filters, setFilters] = useState<Filter>({colors:[], price:0});
 
@@ -36,15 +34,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
       .then((data: Product[]) => {
         setProducts(data);
         checkFilteredItems(data);
-        // if(price > 0) {
-        //   const filteredData = data.filter((product) => product.price <= price);
-        //   setProducts(filteredData);
-        // }
-
-        // if(colors.length > 0) {
-        //   const filteredData = data.filter((product) => colors.find((color) => product.color === color));
-        //   setProducts(filteredData);
-        // } 
       })
       .catch((error) => {
         setIsLoading(false);
@@ -78,12 +67,10 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const handleSelectedColorsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       const color = e.target.value;
-      // setColors([...colors, color]);
       setFilters({...filters, colors: [...filters.colors, color]});
 
     } else {
       const color = e.target.value;
-      // setColors(colors.filter((v) => v !== color));
       const filteredColors = filters.colors.filter((value) => value !== color);
       setFilters({...filters, colors: filteredColors});
     }
@@ -92,13 +79,10 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const handleMaximumPriceSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if(e.target.checked) {
       const value = e.target.value;
-      // setPrice(Number(value));
       setFilters({...filters, price: Number(value)});
 
     } else {
-      // setPrice(0);
       setFilters({...filters, price:0});
-      
     }
   };
 
