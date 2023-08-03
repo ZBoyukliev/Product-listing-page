@@ -1,17 +1,9 @@
-import React, { createContext, useEffect, useState, ReactNode, SetStateAction } from 'react';
+import React, { createContext, useEffect, useState, ReactNode } from 'react';
 import Product from '../types/Product';
+import { SortingOrder } from './models/SortingOrder';
+import { ProductContextType } from './models/ContextModel';
+import { Filter } from './models/filter';
 
-export interface ProductContextType {
-  products: Product[];
-  isLoading: boolean;
-  err: boolean;
-  categoryType: string;
-  filteredProducts: Product[];
-  changeCategoryType: (newCategoryType: string) => void;
-  sortProducts: (newCategoryType: string) => void;
-  setFilteredProducts: React.Dispatch<SetStateAction<Product[]>>;
-  handleSelectedColorsChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
 interface ProductProviderProps {
   children: ReactNode;
@@ -25,7 +17,10 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [err, setErr] = useState<boolean>(false);
   const [categoryType, setCategoryType] = useState<string>('bags');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-  const [colors, setColors] = useState<string[]>([]);
+  // const [colors, setColors] = useState<string[]>([]);
+  // const [price, setPrice] = useState(0);
+
+  const [filters, setFilters] = useState<Filter>({colors:[], price:0});
 
   useEffect(() => {
     setIsLoading(true);
@@ -40,58 +35,86 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
       })
       .then((data: Product[]) => {
         setProducts(data);
-        if(colors.length > 0) {
-          data = products.filter((product: Product) => colors.includes(product.color));
-          setProducts(data);
-        } 
+        checkFilteredItems(data);
+        // if(price > 0) {
+        //   const filteredData = data.filter((product) => product.price <= price);
+        //   setProducts(filteredData);
+        // }
 
+        // if(colors.length > 0) {
+        //   const filteredData = data.filter((product) => colors.find((color) => product.color === color));
+        //   setProducts(filteredData);
+        // } 
       })
       .catch((error) => {
         setIsLoading(false);
         setErr(error);
         setProducts([]);
       });
-  }, [categoryType, colors]);
+  }, [categoryType, filters.colors, filters.price]);
 
-
+  const checkFilteredItems = (data: Product[]) => {
+    if(filters.colors.length > 0) {
+      const filteredData = data.filter((product) => filters.colors.find((color) => product.color === color));
+      console.log(filteredData);
+      if(filters.price > 0) {
+        const items = filteredData.filter((product) => product.price <= filters.price);
+        setProducts(items);
+      } else {
+        setProducts(filteredData);
+      }
+    } else if(filters.price > 0) {
+      const items = data.filter((product) => product.price <= filters.price);
+      setProducts(items);
+    } else {
+      setProducts(data);
+    }
+  };
 
   const changeCategoryType = (newCategoryType: string) => {
     setCategoryType(newCategoryType);
   };
- 
-
-  // const applyFilter = () => {
-  //   const filtered = products.filter((product: Product) => colors.includes(product.color));
-  //   setProducts(filtered);
-  // };
 
   const handleSelectedColorsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       const color = e.target.value;
-      setColors([...colors, color]);
+      // setColors([...colors, color]);
+      setFilters({...filters, colors: [...filters.colors, color]});
 
     } else {
       const color = e.target.value;
-      setColors(colors.filter((v) => v !== color));
+      // setColors(colors.filter((v) => v !== color));
+      const filteredColors = filters.colors.filter((value) => value !== color);
+      setFilters({...filters, colors: filteredColors});
+    }
+  };
+
+  const handleMaximumPriceSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if(e.target.checked) {
+      const value = e.target.value;
+      // setPrice(Number(value));
+      setFilters({...filters, price: Number(value)});
+
+    } else {
+      // setPrice(0);
+      setFilters({...filters, price:0});
+      
     }
   };
 
   const sortProducts = (sortOption: string) => {
     switch (sortOption) {
-      case 'name_asc':
-        setFilteredProducts([...filteredProducts].sort((a, b) => a.title.localeCompare(b.title)));
+      case SortingOrder.NAME_ASC:
+        setProducts([...products].sort((a, b) => a.title.localeCompare(b.title)));
         break;
-      case 'name_desc':
-        setFilteredProducts([...filteredProducts].sort((a, b) => b.title.localeCompare(a.title)));
+      case SortingOrder.NAME_DESC:
+        setProducts([...products].sort((a, b) => b.title.localeCompare(a.title)));
         break;
-      case 'price_asc':
-        setFilteredProducts([...filteredProducts].sort((a, b) => a.price - b.price));
+      case SortingOrder.PRICE_ASC:
+        setProducts([...products].sort((a, b) => a.price - b.price));
         break;
-      case 'price_desc':
-        setFilteredProducts([...filteredProducts].sort((a, b) => b.price - a.price));
-        break;
-      default:
-        // If no option is selected or an invalid option is selected, do nothing
+      case SortingOrder.PRICE_DESC:
+        setProducts([...products].sort((a, b) => b.price - a.price));
         break;
     }
   };
@@ -109,6 +132,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setFilteredProducts,
         handleSelectedColorsChange,
         sortProducts,
+        handleMaximumPriceSelect
       }}
     >
       {children}
