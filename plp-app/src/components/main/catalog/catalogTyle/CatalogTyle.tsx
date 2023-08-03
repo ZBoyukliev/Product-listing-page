@@ -19,18 +19,9 @@ const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
 
     return (
         <>
-            {/* <div key={product._id} className={`${styles['card-container']} card`} >
-                <img src={product.imageUrl} alt={product.title} className="card-img-top" />
-                    <div className="card-body">
-                        <h5 className="card-title">{product.title}</h5>
-                        <p className="card-text">{product.description}</p>
-                        <a href="/" className="btn btn-primary">Add to Cart</a>
-                    </div>
-            </div> */}
             <div key={product._id} className={`${styles['card-container']} col-md-4`}>
                 <div className={`${styles['card-content']} card-main card m-4`}>
                     <div className={`${styles['card-img']}`}>
-
                         <img src={product.imageUrl} alt={product.title} className={` img-fluid card-img-top`} />
                     </div>
                     <div className="card-body d-flex flex-column justify-content-start">
