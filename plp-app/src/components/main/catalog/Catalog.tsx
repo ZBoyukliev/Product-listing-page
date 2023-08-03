@@ -1,6 +1,7 @@
 import { FunctionComponent, useContext } from 'react';
 import styles from './Catalog.module.scss';
-import { ProductContext, ProductContextType } from '../../../context/products';
+import { ProductContext } from '../../../context/products';
+import { ProductContextType } from '../../../context/models/ContextModel';
 
 interface CatalogComponentProps {
   visibleProducts: number;
