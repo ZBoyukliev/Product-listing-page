@@ -18,7 +18,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [categoryType, setCategoryType] = useState<string>('bags');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
-  const [filters, setFilters] = useState<Filter>({colors:[], price:0});
+  const [filters, setFilters] = useState<Filter>({ colors: [], price: 0 });
 
   useEffect(() => {
     setIsLoading(true);
@@ -43,16 +43,16 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   }, [categoryType, filters.colors, filters.price]);
 
   const checkFilteredItems = (data: Product[]) => {
-    if(filters.colors.length > 0) {
+    if (filters.colors.length > 0) {
       const filteredData = data.filter((product) => filters.colors.find((color) => product.color === color));
       console.log(filteredData);
-      if(filters.price > 0) {
+      if (filters.price > 0) {
         const items = filteredData.filter((product) => product.price <= filters.price);
         setProducts(items);
       } else {
         setProducts(filteredData);
       }
-    } else if(filters.price > 0) {
+    } else if (filters.price > 0) {
       const items = data.filter((product) => product.price <= filters.price);
       setProducts(items);
     } else {
@@ -67,22 +67,22 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const handleSelectedColorsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       const color = e.target.value;
-      setFilters({...filters, colors: [...filters.colors, color]});
+      setFilters({ ...filters, colors: [...filters.colors, color] });
 
     } else {
       const color = e.target.value;
       const filteredColors = filters.colors.filter((value) => value !== color);
-      setFilters({...filters, colors: filteredColors});
+      setFilters({ ...filters, colors: filteredColors });
     }
   };
 
   const handleMaximumPriceSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if(e.target.checked) {
+    if (e.target.checked) {
       const value = e.target.value;
-      setFilters({...filters, price: Number(value)});
+      setFilters({ ...filters, price: Number(value) });
 
     } else {
-      setFilters({...filters, price:0});
+      setFilters({ ...filters, price: 0 });
     }
   };
 
