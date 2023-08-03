@@ -16,11 +16,15 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleP
 
     const { categoryType, products } = productContext;
 
-    const filteredProducts = products ? products.filter(
-        (product) => product.category === categoryType
-    ) : [];
+    // const filteredProducts = products ? products.filter(
+    //     (product) => product.category === categoryType 
+    // ) : [];
 
-    const displayedProductsCount = filteredProducts.length;
+    const displayedProductsCount = products.length;
+    console.log( 'visebla', visibleProducts);
+    console.log('length', displayedProductsCount);
+    
+    
 
     return (
         <div className="container category col-8">
@@ -31,7 +35,7 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleP
 
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3">
-                {displayedProductsCount >= 5 ? visibleProducts : displayedProductsCount} out of {displayedProductsCount} products
+                {(displayedProductsCount >= 6 && visibleProducts <= displayedProductsCount )? visibleProducts : displayedProductsCount} out of {displayedProductsCount} products
             </div>
         </div>
     );
