@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer';
 import styles from './App.module.scss';
 import MainComponent from './components/main/Main';
 import { ProductProvider } from './context/products';
+import { ToastContainer } from 'react-toastify';
 
 const App: FunctionComponent = () => {
 
@@ -14,6 +15,7 @@ const App: FunctionComponent = () => {
         <Header />
         <MainComponent />
         <Footer />
+        <ToastContainer />
       </section>
     </ProductProvider>
   );

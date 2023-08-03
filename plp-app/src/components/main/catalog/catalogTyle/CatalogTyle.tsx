@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import styles from './CatalogTyle.module.scss';
 import Product from '../../../../types/Product';
+import { toast } from 'react-toastify';
 
 type Props = {
     product: Product;
@@ -30,7 +31,7 @@ const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
                         <p className="card-text mb-3">Price: {product.discountPrice ? <del>${product.price.toFixed(2)}</del> : `$${product.price.toFixed(2)}`}</p>
                         {product.discountPrice && <p className="card-text">Discount Price: {`$ ${product.discountPrice?.toFixed(2)}`}</p>}
                         <p className="card-text">Rating: {product.rating} stars</p>
-                        <button className={`${styles['btn']}`}>Add to Cart</button>
+                        <button className={`${styles['btn']}`} onClick={() => toast.info('Product addet to cart')}>Add to Cart</button>
                     </div>
                 </div>
             </div>
