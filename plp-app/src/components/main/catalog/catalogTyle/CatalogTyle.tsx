@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent } from 'react';
 import styles from './CatalogTyle.module.scss';
 import Product from '../../../../types/Product';
 
@@ -8,14 +8,14 @@ type Props = {
 
 const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
 
-    const [showAlert, setShowAlert] = useState(false);
+    // const [showAlert, setShowAlert] = useState(false);
 
-    const handleAddToCart = () => {
-        setShowAlert(true);
-        setTimeout(() => {
-            setShowAlert(false);
-        }, 3000); // Hide the alert after 3 seconds (adjust as needed)
-    };
+    // const handleAddToCart = () => {
+    //     setShowAlert(true);
+    //     setTimeout(() => {
+    //         setShowAlert(false);
+    //     }, 3000); // Hide the alert after 3 seconds (adjust as needed)
+    // };
 
     return (
         <>
@@ -39,8 +39,7 @@ const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
                         <p className="card-text mb-3">Price: {product.discountPrice ? <del>${product.price.toFixed(2)}</del> : `$${product.price.toFixed(2)}`}</p>
                         {product.discountPrice && <p className="card-text">Discount Price: {`$ ${product.discountPrice?.toFixed(2)}`}</p>}
                         <p className="card-text">Rating: {product.rating} stars</p>
-                        
-                        <button className={`${styles['btn']}`} onClick={handleAddToCart}>Add to Cart</button>
+                        <button className={`${styles['btn']}`}>Add to Cart</button>
                     </div>
                 </div>
             </div>
