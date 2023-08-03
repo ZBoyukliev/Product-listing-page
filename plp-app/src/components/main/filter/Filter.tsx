@@ -60,7 +60,7 @@ const FilterComponent: FunctionComponent = () => {
         <label htmlFor="priceFilter" className="form-label">Price:</label>
         <div className={`${styles['filter-prices']}`}>
           <div className="form-check">
-            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleMaximumPriceSelect(e)} type="checkbox" className="form-check-input" value={50} id="priceLow" />
+            <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleMaximumPriceSelect(e)} type="checkbox" className="form-check-input" value={100} id="priceLow" />
             <label className="form-check-label" htmlFor="priceLow">Low</label>
           </div>
           <div className="form-check">

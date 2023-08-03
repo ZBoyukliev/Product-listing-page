@@ -1344,8 +1344,8 @@
                 "description": "Some description for the Black Bag",
                 "imageUrl": "/images/bags/bag-black.png",
                 "_createdOn": 1617194128641,
-                "price": 69.99,
-                "discountPrice": 19.90,
+                "price": 109.99,
+                "discountPrice": 39.90,
             },
             "fd436770-76c5-40e2-b231-77409eda7a62": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a62",

@@ -39,7 +39,7 @@ const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMor
             </div>
           )}
         </div>
-      };
+      }
     </>
   );
 };
