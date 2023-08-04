@@ -46,14 +46,12 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     if (filters.colors.length > 0) {
       const filteredData = data.filter((product) => filters.colors.find((color) => product.color === color));
       if (filters.price > 0) {
-        const items = filteredData.filter((product) => product.price <= filters.price);
-        setProducts(items);
+        setPriceFilteredProducts(data);
       } else {
         setProducts(filteredData);
       }
     } else if (filters.price > 0) {
-      const items = data.filter((product) => product.price <= filters.price);
-      setProducts(items);
+      setPriceFilteredProducts(data);
     } else {
       setProducts(data);
     }
@@ -76,6 +74,20 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     setFilters({ ...filters, price: filters.price === price ? 0 : price });
   };
 
+  const setPriceFilteredProducts = (data: Product[]) => {
+    let items: Product[];
+    if(filters.price === 99.99) {
+      items = data.filter((product) => (product.discountPrice || product.price) <= filters.price);
+    } else if (filters.price === 299.99) {
+      items = data.filter((product) => (product.discountPrice || product.price) >= 100 && (product.discountPrice || product.price) <= filters.price)
+    } else if (filters.price === 300) {
+      items = data.filter((product) => (product.discountPrice || product.price) >= filters.price);
+    } else {
+      items = data;
+    }
+    setProducts(items);
+  }
+
   const handleResetFilters = () => {
     setFilters({ colors: [], price: 0 });
   }
@@ -89,10 +101,10 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setProducts([...products].sort((a, b) => b.title.localeCompare(a.title)));
         break;
       case SortingOrder.PRICE_ASC:
-        setProducts([...products].sort((a, b) => (a.discountPrice ? a.discountPrice : a.price) - (b.discountPrice ? b.discountPrice : b.price)));
+        setProducts([...products].sort((a, b) => (a.discountPrice || a.price) - (b.discountPrice || b.price)));
         break;
       case SortingOrder.PRICE_DESC:
-        setProducts([...products].sort((a, b) => (b.discountPrice ? b.discountPrice : b.price) - (a.discountPrice ? a.discountPrice : a.price)));
+        setProducts([...products].sort((a, b) => (b.discountPrice || b.price) - (a.discountPrice || a.price)));
         break;
     }
   };

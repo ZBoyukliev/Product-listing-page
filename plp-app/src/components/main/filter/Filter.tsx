@@ -123,17 +123,17 @@ const FilterComponent: FunctionComponent<Props> = ({ onCloseFilters }) => {
             <ul>
               <li>
                 <button
-                  onClick={() => handleMaximumPriceSelect(100)}
-                  className={`${styles['filtered-button']} ${filters.price === 100 && styles['selected']} d-flex justify-content-between align-items-center btn`}  >
-                  Low
+                  onClick={() => handleMaximumPriceSelect(99.99)}
+                  className={`${styles['filtered-button']} ${filters.price === 99.99 && styles['selected']} d-flex justify-content-between align-items-center btn`}  >
+                  Low $0-$99.99
                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z" /></svg>
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleMaximumPriceSelect(299)}
-                  className={`${styles['filtered-button']} ${filters.price === 299 && styles['selected']} d-flex justify-content-between align-items-center btn`} >
-                  Medium
+                  onClick={() => handleMaximumPriceSelect(299.99)}
+                  className={`${styles['filtered-button']} ${filters.price === 299.99 && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                  Medium $100-$299.99
                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z" /></svg>
                 </button>
               </li>
@@ -141,7 +141,7 @@ const FilterComponent: FunctionComponent<Props> = ({ onCloseFilters }) => {
                 <button
                   onClick={() => handleMaximumPriceSelect(300)}
                   className={`${styles['filtered-button']} ${filters.price === 300 && styles['selected']} d-flex justify-content-between align-items-center btn`} >
-                  High
+                  High $300+
                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z" /></svg>
                 </button>
               </li>
