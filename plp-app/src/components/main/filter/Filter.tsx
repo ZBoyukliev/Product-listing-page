@@ -59,6 +59,22 @@ const FilterComponent: FunctionComponent = () => {
                           </li>
                           <li>
                             <button 
+                            onClick={() => handleSelectedColorsChange("orange")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('orange') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Orange 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
+                            onClick={() => handleSelectedColorsChange("yellow")}
+                            className={`${styles['filtered-button']} ${filters.colors.includes('yellow') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
+                              Yellow 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"/></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button 
                             onClick={() => handleSelectedColorsChange("brown")}
                             className={`${styles['filtered-button']} ${filters.colors.includes('brown') && styles['selected']} d-flex justify-content-between align-items-center btn`} >
                               Brown 
