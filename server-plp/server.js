@@ -1432,7 +1432,7 @@
                 "imageUrl": "/images/bags/bags-RR1.png",
                 "_createdOn": 1617194128648,
                 "price": 54.90,
-                "rating": 3.5,
+                "rating": 4,
             },
             // SHOES--------------------------------------------------------------------
             "sh436770-76c5-40e2-b231-77409eda7a01": {
@@ -1446,6 +1446,7 @@
                 "_createdOn": 2617194128601,
                 "price": 110.90,
                 "discountPrice": 60.00,
+                "rating": 5,
             },
             "sh436770-76c5-40e2-b231-77409eda7a02": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a02",
@@ -1457,6 +1458,7 @@
                 "imageUrl": "/images/shoes/shoes-red1.png",
                 "_createdOn": 2617194128602,
                 "price": 88.70,
+                "rating": 4,
             },
             "sh436770-76c5-40e2-b231-77409eda7a03": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a03",
@@ -1468,6 +1470,7 @@
                 "_createdOn": 2617194128603,
                 "price": 120.99,
                 "discountPrice": 70.00,
+                "rating": 4,
             },
             "sh436770-76c5-40e2-b231-77409eda7a04": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a04",
@@ -1480,6 +1483,7 @@
                 "_createdOn": 2617194128604,
                 "price": 99.99,
                 "discountPrice": 40.00,
+                "rating": 3,
             },
             "sh436770-76c5-40e2-b231-77409eda7a05": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a05",
@@ -1491,6 +1495,7 @@
                 "imageUrl": "/images/shoes/shoes-retro.png",
                 "_createdOn": 2617194128605,
                 "price": 112.99,
+                "rating": 5,
             },
             "sh436770-76c5-40e2-b231-77409eda7a06": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a06",
@@ -1502,6 +1507,7 @@
                 "imageUrl": "/images/shoes/shoes-pink.png",
                 "_createdOn": 2617194128606,
                 "price": 121.99,
+                "rating": 5,
             },
             "sh436770-76c5-40e2-b231-77409eda7a07": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a07",
@@ -1513,6 +1519,7 @@
                 "imageUrl": "/images/shoes/shoes-pink.png",
                 "_createdOn": 2617194128607,
                 "price": 112.99,
+                "rating": 4,
             },
 
             // WATCHES -----------------------------------------------------------------------
@@ -1527,6 +1534,7 @@
                 "_createdOn": 2617194128621,
                 "price": 212.99,
                 "discountPrice": 200.00,
+                "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a02": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a02",
@@ -1538,6 +1546,7 @@
                 "imageUrl": "/images/watches/watch2.png",
                 "_createdOn": 2617194128622,
                 "price": 320.99,
+                "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a03": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a03",
@@ -1549,6 +1558,7 @@
                 "imageUrl": "/images/watches/watch3.png",
                 "_createdOn": 2617194128623,
                 "price": 280.89,
+                "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a04": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a04",
@@ -1560,6 +1570,7 @@
                 "imageUrl": "/images/watches/watch4.png",
                 "_createdOn": 2617194128624,
                 "price": 250.89,
+                "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a05": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a05",
@@ -1571,6 +1582,7 @@
                 "imageUrl": "/images/watches/watch5.png",
                 "_createdOn": 2617194128625,
                 "price": 350.89,
+                "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a06": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a06",
@@ -1582,6 +1594,7 @@
                 "imageUrl": "/images/watches/watch6.png",
                 "_createdOn": 2617194128626,
                 "price": 180.89,
+                "rating": 3,
             },
             "wt436770-76c5-40e2-b231-77409eda7a07": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a07",
@@ -1593,6 +1606,7 @@
                 "imageUrl": "/images/watches/watch7.png",
                 "_createdOn": 2617194128627,
                 "price": 160.89,
+                "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a08": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a08",
@@ -1604,6 +1618,7 @@
                 "imageUrl": "/images/watches/watch8.png",
                 "_createdOn": 2617194128628,
                 "price": 140.89,
+                "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a09": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a09",
@@ -1615,6 +1630,7 @@
                 "imageUrl": "/images/watches/watch-9.png",
                 "_createdOn": 2617194128629,
                 "price": 140.89,
+                "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a90": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a90",
@@ -1626,6 +1642,7 @@
                 "imageUrl": "/images/watches/watch10.png",
                 "_createdOn": 2617194128690,
                 "price": 140.89,
+                "rating": 5,
             },
             // SUNGLASSES-----------------------------------------------------------
             "sg436770-76c5-40e2-b231-97409eda7a91": {
@@ -1638,6 +1655,7 @@
                 "imageUrl": "/images/sunglasses/sun1.png",
                 "_createdOn": 2618494128691,
                 "price": 80.89,
+                "rating": 5,
             },
             "sg436770-76c5-40e2-b231-97409eda7a92": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a92",
@@ -1649,6 +1667,7 @@
                 "imageUrl": "/images/sunglasses/sun2.png",
                 "_createdOn": 2618494128692,
                 "price": 99.89,
+                "rating": 5,
             },
             "sg436770-76c5-40e2-b231-97409eda7a93": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a93",
@@ -1660,6 +1679,7 @@
                 "imageUrl": "/images/sunglasses/sun3.png",
                 "_createdOn": 2618494128693,
                 "price": 89.89,
+                "rating": 4,
             },
             "sg436770-76c5-40e2-b231-97409eda7a94": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a94",
@@ -1671,6 +1691,7 @@
                 "imageUrl": "/images/sunglasses/sunglasses-yellow.png",
                 "_createdOn": 2618494128694,
                 "price": 109.89,
+                "rating": 4,
             },
         },
         comments: {
