@@ -1346,6 +1346,7 @@
                 "_createdOn": 1617194128641,
                 "price": 109.99,
                 "discountPrice": 39.90,
+                "rating": 4,
             },
             "fd436770-76c5-40e2-b231-77409eda7a62": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a62",
@@ -1357,6 +1358,7 @@
                 "imageUrl": "/images/bags/bag-gray1.png",
                 "_createdOn": 1617194128642,
                 "price": 89.90,
+                "rating": 4.5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a63": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a63",
@@ -1368,6 +1370,7 @@
                 "imageUrl": "/images/bags/bag-blue1.png",
                 "_createdOn": 1617194128643,
                 "price": 99.90,
+                "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a64": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a64",
@@ -1380,6 +1383,7 @@
                 "_createdOn": 1617194128644,
                 "price": 99.90,
                 "discountPrice": 40.00,
+                "rating": 3,
             },
             "fd436770-76c5-40e2-b231-77409eda7a65": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a65",
@@ -1391,6 +1395,7 @@
                 "imageUrl": "/images/bags/bag-gray.png",
                 "_createdOn": 1617194128645,
                 "price": 76.90,
+                "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a66",
@@ -1402,6 +1407,7 @@
                 "imageUrl": "/images/bags/bag-lv.png",
                 "_createdOn": 1617194128646,
                 "price": 76.90,
+                "rating": 4,
             },
             "fd436770-76c5-40e2-b231-77409eda7a67": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a67",
@@ -1414,6 +1420,7 @@
                 "_createdOn": 1617194128647,
                 "price": 76.90,
                 "discountPrice": 50.00,
+                "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a68": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a68",
@@ -1425,6 +1432,7 @@
                 "imageUrl": "/images/bags/bags-RR1.png",
                 "_createdOn": 1617194128648,
                 "price": 54.90,
+                "rating": 3.5,
             },
             // SHOES--------------------------------------------------------------------
             "sh436770-76c5-40e2-b231-77409eda7a01": {

@@ -21,22 +21,23 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleP
     // ) : [];
 
     const displayedProductsCount = products.length;
-    console.log( 'visebla', visibleProducts);
+    console.log('visebla', visibleProducts);
     console.log('length', displayedProductsCount);
-    
-    
+
+
 
     return (
-        <div className="container category col-8">
+        <div className="container category text-center text-md-start ms-md-3 ms-xl-5 col-12 col-md-6">
             <div className="row">
-                <div className="col-sm-6 col-md-4 col-lg-3">
+                <div className="col-12 col-md-12">
                     <h1>{categoryType.toUpperCase()} </h1>
                 </div>
 
+            <div className="col-12 col-md-12">
+                {(displayedProductsCount >= 6 && visibleProducts <= displayedProductsCount) ? visibleProducts : displayedProductsCount} out of {displayedProductsCount} products
             </div>
-            <div className="col-sm-6 col-md-4 col-lg-3">
-                {(displayedProductsCount >= 6 && visibleProducts <= displayedProductsCount )? visibleProducts : displayedProductsCount} out of {displayedProductsCount} products
             </div>
+
         </div>
     );
 };

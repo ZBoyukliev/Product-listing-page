@@ -13,7 +13,7 @@ const SorterComponent: FunctionComponent = () => {
   const { sortProducts } = productContext;
 
   return (
-    <div className="sorter-container col-3">
+    <div className="sorter-container col-12 col-md-5">
       <h5>Sort By:</h5>
       <div className="mb-3">
         <select

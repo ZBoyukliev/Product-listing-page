@@ -8,9 +8,19 @@
         .right-s {
             margin: 20px 0;
         }
-        .filter-component {
-            width: 20%;
-        }
+        // .filter-component {
+        //     width: 20%;
+        // }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        
+    .main-page {
+     
+        // .filter-component {
+        //     width: 30%;
+        // }
+    }
     }
 
     @media (max-width: 767px) {
@@ -25,7 +35,17 @@
                 padding-top: 40px;
                 display: block;
                 width: 100%;
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease-in-out, visibility 0.3 ease-in-out;
+            
+            &.show {
+                display: block;
+                opacity: 1;
+                visibility: visible;
             }
         }
        
     }
+}
