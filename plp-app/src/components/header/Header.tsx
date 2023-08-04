@@ -24,7 +24,7 @@ const Header: FunctionComponent = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className={`${styles['nav-div-ul']}`} id="navbarSupportedContent">
+                    <div className={`${styles['nav-div-ul']} collapse navbar-collapse`} id="navbarSupportedContent">
                         <ul className={`${styles['nav-ul']} navbar-nav me-auto mb-2 mb-lg-0 justify-content-around`}>
                             <li className={`${styles['nav-ul-li']} nav-item`}>
                                 <Link onClick={() => changeCategoryType('bags')} to="/" className="nav-link" aria-current="page" >BAGS</Link>
