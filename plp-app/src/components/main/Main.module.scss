@@ -13,16 +13,6 @@
         // }
     }
 
-    @media (min-width: 768px) and (max-width: 1199px) {
-        
-    .main-page {
-     
-        // .filter-component {
-        //     width: 30%;
-        // }
-    }
-    }
-
     @media (max-width: 767px) {
         .main-page {
             margin: 0;
@@ -31,7 +21,7 @@
                 background-color: white;
                 z-index: 10;
                 left: 0;
-                top: 40px;
+                top: 0px;
                 padding-top: 40px;
                 display: block;
                 width: 100%;

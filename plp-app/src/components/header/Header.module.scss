@@ -22,17 +22,27 @@
             .nav-ul {
                 font-size: 26px;
                 width: 100%;
+                
                 .nav-ul-li {
-                    padding: 0 0.9rem;
-                }
-                .nav-ul-li:hover {
                     cursor: pointer;
-                    background-color: rgba(92, 92, 92, 0.1);
-                    transition: ease-in-out 0.2s;
-                    transform: scale(1);
-                    border-radius: 20%;
+                    line-height: 40px;
+                    
                     a {
-                        font-weight: 500;
+                        color:$gray-600;
+                        transition: color 0.2s ease-in-out;
+                        font-size: 32px;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid transparent;
+                    }
+                    a:hover {
+                        border-bottom: 1px solid $gray-900;
+                        color: $gray-900;
+                        width: 100%;
+                    }
+                    .selected {
+                        border-bottom: 1px solid $gray-900;
+                        color: $gray-900;
+                        width: 100%;
                     }
                 }
             }
@@ -41,7 +51,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
    .nav-main {
     .nav-container {
         .nav-div-ul{

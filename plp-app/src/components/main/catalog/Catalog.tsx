@@ -26,7 +26,7 @@ const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMor
   return (
     <>
       {isLoading ? <Loading /> :
-        <div className={`${styles['catalog']} container col-9`}>
+        <div className={`${styles['catalog']} container col-12 col-md-9`}>
           <div className="row mb-4">
 
             {filteredProducts.map(product => <CatalogTyleComponent key={product._id} product={product} />)}

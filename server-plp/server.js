@@ -1358,7 +1358,7 @@
                 "imageUrl": "/images/bags/bag-gray1.png",
                 "_createdOn": 1617194128642,
                 "price": 89.90,
-                "rating": 4.5,
+                "rating": 4,
             },
             "fd436770-76c5-40e2-b231-77409eda7a63": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a63",

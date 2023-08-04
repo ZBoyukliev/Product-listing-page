@@ -1,14 +1,15 @@
-import { FunctionComponent, useContext } from 'react';
+import { FunctionComponent, useContext, useState } from 'react';
 import { ProductContext } from '../../context/products';
 import { ProductContextType } from '../../context/models/ContextModel';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
+import { HeaderLinks } from './models/HeaderLinks';
 
 
 const Header: FunctionComponent = () => {
 
     const contextValue = useContext<ProductContextType | null>(ProductContext);
-
+    const [selectedHeader, setSelectedHeader] = useState<HeaderLinks>(HeaderLinks.BAGS)
     if (!contextValue) {
         return <div>Loading...</div>;
     }
@@ -26,17 +27,33 @@ const Header: FunctionComponent = () => {
                     </button>
                     <div className={`${styles['nav-div-ul']} collapse navbar-collapse`} id="navbarSupportedContent">
                         <ul className={`${styles['nav-ul']} navbar-nav me-auto mb-2 mb-lg-0 justify-content-around`}>
-                            <li className={`${styles['nav-ul-li']} nav-item`}>
-                                <Link onClick={() => changeCategoryType('bags')} to="/" className="nav-link" aria-current="page" >BAGS</Link>
+                            <li className={`${styles['nav-ul-li']}  nav-item`}>
+                                <Link  onClick={() =>{
+                                    setSelectedHeader(HeaderLinks.BAGS)
+                                    changeCategoryType(HeaderLinks.BAGS)
+                                }
+                                } to="/" className={`${selectedHeader === HeaderLinks.BAGS ? styles.selected : ''} nav-link`} aria-current="page" >BAGS</Link>
                             </li>
-                            <li className={`${styles['nav-ul-li']} nav-item`}>
-                                <Link onClick={() => changeCategoryType('shoes')} to="/" className="nav-link" aria-current="page" >SHOES</Link>
+                            <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.SHOES ? 'selected' : ''} nav-item`}>
+                                <Link onClick={() =>{
+                                    setSelectedHeader(HeaderLinks.SHOES)
+                                    changeCategoryType(HeaderLinks.SHOES)
+                                } 
+                                } to="/" className={`${selectedHeader === HeaderLinks.SHOES ? styles.selected : ''} nav-link`} aria-current="page" >SHOES</Link>
                             </li>
-                            <li className={`${styles['nav-ul-li']} nav-item`}>
-                                <Link onClick={() => changeCategoryType('watches')} to="/" className="nav-link" aria-current="page" >WATCHES</Link>
+                            <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.WATCHES ? 'selected' : ''} nav-item`}>
+                                <Link onClick={() =>{
+                                    setSelectedHeader(HeaderLinks.WATCHES)
+                                    changeCategoryType(HeaderLinks.WATCHES)
+                                } 
+                                } to="/" className={`${selectedHeader === HeaderLinks.WATCHES ? styles.selected : ''} nav-link`} aria-current="page" >WATCHES</Link>
                             </li>
-                            <li className={`${styles['nav-ul-li']} nav-item`}>
-                                <Link onClick={() => changeCategoryType('sunglasses')} to="/" className="nav-link" aria-current="page" >SUNGLASSES</Link>
+                            <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.SUNGLASSES ? 'selected' : ''} nav-item`}>
+                                <Link onClick={() =>{
+                                    setSelectedHeader(HeaderLinks.SUNGLASSES)
+                                    changeCategoryType(HeaderLinks.SUNGLASSES)
+                                } 
+                                } to="/" className={`${selectedHeader === HeaderLinks.SUNGLASSES ? styles.selected : ''} nav-link`} aria-current="page" >SUNGLASSES</Link>
                             </li>
                         </ul>
                     </div>

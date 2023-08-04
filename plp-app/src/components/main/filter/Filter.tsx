@@ -17,6 +17,8 @@ const FilterComponent: FunctionComponent<Props> = ({ onCloseFilters }) => {
 
   return (
     <aside className={`${styles["filter-main"]} pt-3`}>
+        <p className='text-end d-block d-md-none pt-2 pe-4' onClick={onCloseFilters}>X</p>
+
       <div className="d-flex align-items-end justify-content-between">
         <h2 className="px-3 py-1">FILTER </h2>
         <p className={`${styles['reset-x']} d-none d-md-block`} onClick={handleResetFilters}>Reset X</p>

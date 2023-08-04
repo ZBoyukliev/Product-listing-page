@@ -40,14 +40,13 @@ const MainComponent: FunctionComponent = () => {
   return (
     <div className={`${styles['main-page']} row`}>
       <div className={`${styles['filter-component']} ${showFilters ? styles.show : ''} shadow col-12 col-md-4 col-xl-3`}>
-        <p className='text-end d-block d-md-none' onClick={onCloseFilters}>X</p>
         <FilterComponent onCloseFilters={onCloseFilters} />
       </div>
-      <div className='col-12 d-md-none'>
+      <div className='col-12 d-md-none ps-3 display-5'>
         <p onClick={(e:any) => onShowFilters(e)}>Filters</p>
       </div>
       <div className="col-12 col-md-8 col-xl-9">
-        <div className={`${'right-s'} row mt-3 mb-2 d-flex align-items-center flex-column-reverse flex-md-row`}>
+        <div className={`${'right-s'} px-2 row mt-3 mb-2 d-flex align-items-center flex-column-reverse flex-md-row pe-5`}>
           <CategoryComponent visibleProducts={visibleProducts} />
           <SorterComponent />
         </div>

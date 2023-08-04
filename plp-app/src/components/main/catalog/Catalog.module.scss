@@ -12,3 +12,10 @@
         padding: 2px 4px;
     }
 }
+
+@media (max-width:767px) {
+    .catalog {
+
+        margin: 0 !important;
+    }
+}
