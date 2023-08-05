@@ -15,16 +15,7 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleP
     }
 
     const { categoryType, products } = productContext;
-
-    // const filteredProducts = products ? products.filter(
-    //     (product) => product.category === categoryType 
-    // ) : [];
-
     const displayedProductsCount = products.length;
-    console.log('visebla', visibleProducts);
-    console.log('length', displayedProductsCount);
-
-
 
     return (
         <div className="container category text-center text-md-start ms-md-3 ms-xl-5 col-12 col-md-6">

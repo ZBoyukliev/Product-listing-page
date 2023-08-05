@@ -17,6 +17,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [err, setErr] = useState<boolean>(false);
   const [categoryType, setCategoryType] = useState<string>('bags');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const [sortingOptions, setSortingOption] = useState("")
 
   const [filters, setFilters] = useState<Filter>({ colors: [], price: 0 });
 
@@ -34,6 +35,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
       .then((data: Product[]) => {
         setProducts(data);
         checkFilteredItems(data);
+        sortProducts(sortingOptions);
       })
       .catch((error) => {
         setIsLoading(false);
@@ -82,19 +84,21 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     setFilters({ colors: [], price: 0 });
   }
 
+
   const sortProducts = (sortOption: string) => {
+    setSortingOption(sortOption);
     switch (sortOption) {
       case SortingOrder.NAME_ASC:
-        setProducts([...products].sort((a, b) => a.title.localeCompare(b.title)));
+        setProducts((oldProducts) => [...oldProducts].sort((a, b) => a.title.localeCompare(b.title)));
         break;
       case SortingOrder.NAME_DESC:
-        setProducts([...products].sort((a, b) => b.title.localeCompare(a.title)));
+        setProducts((oldProducts) => [...oldProducts].sort((a, b) => b.title.localeCompare(a.title)));
         break;
       case SortingOrder.PRICE_ASC:
-        setProducts([...products].sort((a, b) => (a.discountPrice || a.price) - (b.discountPrice || b.price)));
+        setProducts( (oldProducts) => [...oldProducts].sort((a, b) => (a.discountPrice || a.price) - (b.discountPrice || b.price)));
         break;
       case SortingOrder.PRICE_DESC:
-        setProducts([...products].sort((a, b) => (b.discountPrice || b.price) - (a.discountPrice || a.price)));
+        setProducts( (oldProducts) =>[...oldProducts].sort((a, b) => (b.discountPrice || b.price) - (a.discountPrice || a.price)));
         break;
     }
   };

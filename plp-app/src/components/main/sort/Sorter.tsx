@@ -21,7 +21,7 @@ const SorterComponent: FunctionComponent = () => {
           id="sortingOption"
           onChange={(e) =>sortProducts(e.target.value)}
         >
-          <option value="">Select an option</option>
+          <option value={""}>Select an option</option>
           <option value={SortingOrder.NAME_ASC}>A-Z</option>
           <option value={SortingOrder.NAME_DESC}>Z-A</option>
           <option value={SortingOrder.PRICE_ASC}>Price Low-High</option>

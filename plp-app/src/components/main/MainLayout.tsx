@@ -30,10 +30,6 @@ const MainComponent: FunctionComponent = () => {
 
   const onShowFilters = (e: any) => {
     e.preventDefault();
-    console.log(e);
-    console.log('clicked');
-
-
     setShowFilters(true);
   }
 
