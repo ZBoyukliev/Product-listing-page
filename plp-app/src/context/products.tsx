@@ -3,6 +3,7 @@ import Product from '../types/Product';
 import { SortingOrder } from './models/SortingOrder';
 import { ProductContextType } from './models/ContextModel';
 import { Filter } from './models/filter';
+import { setPriceFilteredProducts } from './helpers/priceFiilteredProduct';
 
 interface ProductProviderProps {
   children: ReactNode;
@@ -46,12 +47,14 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     if (filters.colors.length > 0) {
       const filteredData = data.filter((product) => filters.colors.find((color) => product.color === color));
       if (filters.price > 0) {
-        setPriceFilteredProducts(data);
+        const filteredPrceData = setPriceFilteredProducts(filteredData, filters);
+        setProducts(filteredPrceData);
       } else {
         setProducts(filteredData);
       }
     } else if (filters.price > 0) {
-      setPriceFilteredProducts(data);
+      const filteredPrceData = setPriceFilteredProducts(data, filters);
+      setProducts(filteredPrceData);
     } else {
       setProducts(data);
     }
@@ -74,19 +77,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     setFilters({ ...filters, price: filters.price === price ? 0 : price });
   };
 
-  const setPriceFilteredProducts = (data: Product[]) => {
-    let items: Product[];
-    if(filters.price === 99.99) {
-      items = data.filter((product) => (product.discountPrice || product.price) <= filters.price);
-    } else if (filters.price === 299.99) {
-      items = data.filter((product) => (product.discountPrice || product.price) >= 100 && (product.discountPrice || product.price) <= filters.price)
-    } else if (filters.price === 300) {
-      items = data.filter((product) => (product.discountPrice || product.price) >= filters.price);
-    } else {
-      items = data;
-    }
-    setProducts(items);
-  }
 
   const handleResetFilters = () => {
     setFilters({ colors: [], price: 0 });

@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext, useState } from 'react';
+import { FunctionComponent, useContext, useEffect, useState } from 'react';
 import { ProductContext } from '../../context/products';
 import { ProductContextType } from '../../context/models/ContextModel';
 import { Link } from 'react-router-dom';
@@ -9,13 +9,19 @@ import { HeaderLinks } from './models/HeaderLinks';
 const Header: FunctionComponent = () => {
 
     const contextValue = useContext<ProductContextType | null>(ProductContext);
-    const [selectedHeader, setSelectedHeader] = useState<HeaderLinks>(HeaderLinks.BAGS)
+    const [selectedHeader, setSelectedHeader] = useState<HeaderLinks>(HeaderLinks.BAGS);
+
+   
+
     if (!contextValue) {
         return <div>Loading...</div>;
     }
 
     const { changeCategoryType } = contextValue;
 
+    useEffect(() => {
+        changeCategoryType(selectedHeader)
+    },[selectedHeader]);
 
     return (
         <>
@@ -28,31 +34,19 @@ const Header: FunctionComponent = () => {
                     <div className={`${styles['nav-div-ul']} collapse navbar-collapse`} id="navbarSupportedContent">
                         <ul className={`${styles['nav-ul']} navbar-nav me-auto mb-2 mb-lg-0 justify-content-around`}>
                             <li className={`${styles['nav-ul-li']}  nav-item`}>
-                                <Link  onClick={() =>{
-                                    setSelectedHeader(HeaderLinks.BAGS)
-                                    changeCategoryType(HeaderLinks.BAGS)
-                                }
+                                <Link  onClick={() => setSelectedHeader(HeaderLinks.BAGS)
                                 } to="/" className={`${selectedHeader === HeaderLinks.BAGS ? styles.selected : ''} nav-link`} aria-current="page" >BAGS</Link>
                             </li>
                             <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.SHOES ? 'selected' : ''} nav-item`}>
-                                <Link onClick={() =>{
-                                    setSelectedHeader(HeaderLinks.SHOES)
-                                    changeCategoryType(HeaderLinks.SHOES)
-                                } 
+                                <Link onClick={() => setSelectedHeader(HeaderLinks.SHOES)
                                 } to="/" className={`${selectedHeader === HeaderLinks.SHOES ? styles.selected : ''} nav-link`} aria-current="page" >SHOES</Link>
                             </li>
                             <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.WATCHES ? 'selected' : ''} nav-item`}>
-                                <Link onClick={() =>{
-                                    setSelectedHeader(HeaderLinks.WATCHES)
-                                    changeCategoryType(HeaderLinks.WATCHES)
-                                } 
+                                <Link onClick={() => setSelectedHeader(HeaderLinks.WATCHES)
                                 } to="/" className={`${selectedHeader === HeaderLinks.WATCHES ? styles.selected : ''} nav-link`} aria-current="page" >WATCHES</Link>
                             </li>
                             <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.SUNGLASSES ? 'selected' : ''} nav-item`}>
-                                <Link onClick={() =>{
-                                    setSelectedHeader(HeaderLinks.SUNGLASSES)
-                                    changeCategoryType(HeaderLinks.SUNGLASSES)
-                                } 
+                                <Link onClick={() => setSelectedHeader(HeaderLinks.SUNGLASSES)
                                 } to="/" className={`${selectedHeader === HeaderLinks.SUNGLASSES ? styles.selected : ''} nav-link`} aria-current="page" >SUNGLASSES</Link>
                             </li>
                         </ul>
