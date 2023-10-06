@@ -16,12 +16,12 @@ const FilterComponent: FunctionComponent<Props> = ({ onCloseFilters }) => {
   const { filters, handleSelectedColorsChange, handleMaximumPriceSelect, handleResetFilters } = productContext;
 
   return (
-    <aside className={`${styles["filter-main"]} pt-3`}>
+    <aside className={`${styles["filter-main"]} pt-4 pe-2`}>
         <p className='text-end d-block d-md-none pt-2 pe-4' onClick={onCloseFilters}>X</p>
 
       <div className="d-flex align-items-end justify-content-between">
         <h2 className="px-3 py-1">FILTER </h2>
-        <p className={`${styles['reset-x']} d-none d-md-block`} onClick={handleResetFilters}>Reset X</p>
+        <p className={`${styles['reset-x']} d-none d-md-block pe-2`} onClick={handleResetFilters}>Reset X</p>
       </div>
       <div className="accordion accordion-flush" id="accordionFlushExample">
         <div className="accordion-item">
@@ -152,7 +152,7 @@ const FilterComponent: FunctionComponent<Props> = ({ onCloseFilters }) => {
         </div>
       </div>
       <button className="w-100 text-info btn btn-outline-dark mb-2 d-block d-md-none" onClick={onCloseFilters}>Show results</button>
-      <p className={`${styles['reset-x']} d-block d-md-none text-center`} onClick={handleResetFilters}>Reset</p>
+      <p className={`${styles['reset-x']} d-block d-md-none text-center p-4`} onClick={handleResetFilters}>Reset</p>
     </aside>
   );
 };
