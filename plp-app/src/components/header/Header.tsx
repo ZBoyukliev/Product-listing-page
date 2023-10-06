@@ -11,8 +11,6 @@ const Header: FunctionComponent = () => {
     const contextValue = useContext<ProductContextType | null>(ProductContext);
     const [selectedHeader, setSelectedHeader] = useState<HeaderLinks>(HeaderLinks.BAGS);
 
-   
-
     if (!contextValue) {
         return <div>Loading...</div>;
     }
@@ -21,7 +19,7 @@ const Header: FunctionComponent = () => {
 
     useEffect(() => {
         changeCategoryType(selectedHeader)
-    },[selectedHeader]);
+    }, [selectedHeader]);
 
     return (
         <>
@@ -34,7 +32,7 @@ const Header: FunctionComponent = () => {
                     <div className={`${styles['nav-div-ul']} collapse navbar-collapse`} id="navbarSupportedContent">
                         <ul className={`${styles['nav-ul']} navbar-nav me-auto mb-2 mb-lg-0 justify-content-around`}>
                             <li className={`${styles['nav-ul-li']}  nav-item`}>
-                                <Link  onClick={() => setSelectedHeader(HeaderLinks.BAGS)
+                                <Link onClick={() => setSelectedHeader(HeaderLinks.BAGS)
                                 } to="/" className={`${selectedHeader === HeaderLinks.BAGS ? styles.selected : ''} nav-link`} aria-current="page" >BAGS</Link>
                             </li>
                             <li className={`${styles['nav-ul-li']} ${selectedHeader === HeaderLinks.SHOES ? 'selected' : ''} nav-item`}>
