@@ -8,8 +8,9 @@
 
     .btn {
         background: linear-gradient(to right, rgba($primary, 1), rgba($secondary, 1));
+        border-radius: 1rem;
         border: 0;
-        padding: 2px 4px;
+        padding: 0.5rem 1rem;
     }
 }
 

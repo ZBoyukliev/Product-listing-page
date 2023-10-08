@@ -33,7 +33,7 @@ const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMor
           </div>
           {visibleProducts < products.length && (
             <div className="text-center">
-              <button className={`${styles['btn']} mb-5`} onClick={onLoadMore}>
+              <button className={`${styles['btn']} shadow border-2 mb-5`} onClick={onLoadMore}>
                 MORE RESULTS
               </button>
             </div>
