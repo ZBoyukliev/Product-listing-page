@@ -1739,7 +1739,7 @@
                 "imageUrl": "/images/sunglasses/img8.jpg",
                 "_createdOn": 2618494128694,
                 "price": 131.89,
-                "rating": 5,
+                "rating": 4,
             },
         },
         comments: {
