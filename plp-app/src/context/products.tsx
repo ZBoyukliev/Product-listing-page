@@ -22,7 +22,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [filters, setFilters] = useState<Filter>({ colors: [], price: 0 });
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true); 
 
     fetch(`http://localhost:3030/data/items?where=category%3D%22${categoryType}%22`)
       .then((response) => {
@@ -95,10 +95,10 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setProducts((oldProducts) => [...oldProducts].sort((a, b) => b.title.localeCompare(a.title)));
         break;
       case SortingOrder.PRICE_ASC:
-        setProducts( (oldProducts) => [...oldProducts].sort((a, b) => (a.discountPrice || a.price) - (b.discountPrice || b.price)));
+        setProducts((oldProducts) => [...oldProducts].sort((a, b) => (a.discountPrice || a.price) - (b.discountPrice || b.price)));
         break;
       case SortingOrder.PRICE_DESC:
-        setProducts( (oldProducts) =>[...oldProducts].sort((a, b) => (b.discountPrice || b.price) - (a.discountPrice || a.price)));
+        setProducts((oldProducts) => [...oldProducts].sort((a, b) => (b.discountPrice || b.price) - (a.discountPrice || a.price)));
         break;
     }
   };
