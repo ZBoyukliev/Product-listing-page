@@ -3,19 +3,25 @@
 
 .foot-main {
     background: linear-gradient(to right, rgba($primary, 1), rgba($secondary, 1));
+
     .div-icons {
         ul {
             li {
-                text-align: start; 
+                text-align: start;
                 margin-left: 40px;
             }
         }
+
         a {
             color: black;
             font-size: 20px;
+            &:hover {
+                color: rgb(167, 167, 167);
+            }
         }
     }
-  .text-footer {
-    color: rgb(167, 167, 167);
-  }
+
+    .text-footer {
+        color: rgb(167, 167, 167);
+    }
 }
