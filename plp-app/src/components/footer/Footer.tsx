@@ -56,7 +56,7 @@ const Footer: FunctionComponent = () => {
         </div>
       </div>
 
-      <div className="text-center p-3 bg-dark text-white">
+      <div className={`${styles['text-footer']} text-center p-3 bg-dark`}>
         © {new Date().getFullYear()} Product Listing Page App. All rights reserved.
       </div>
     </footer>
