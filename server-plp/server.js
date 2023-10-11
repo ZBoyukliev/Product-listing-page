@@ -1606,7 +1606,7 @@
                 "imageUrl": "/images/watches/watch7.png",
                 "_createdOn": 2617194128627,
                 "price": 160.89,
-                "rating": 4,
+                "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a08": {
                 "_id": "wh436770-76c5-40e2-b231-77409eda7a08",
@@ -1629,7 +1629,7 @@
                 "description": "Watches 1781 description for the nsx watch",
                 "imageUrl": "/images/watches/watch-9.png",
                 "_createdOn": 2617194128629,
-                "price": 140.89,
+                "price": 141.89,
                 "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a90": {
