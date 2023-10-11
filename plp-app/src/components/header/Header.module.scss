@@ -7,9 +7,10 @@
 
     .nav-container {
         width: 100%;
+
         a {
             width: 20%;
-            // overflow: hidden;
+
             img {
                 height: 18%;
                 width: 18%;
@@ -18,27 +19,30 @@
         }
 
         .nav-div-ul {
-          width: 100%;
+            width: 100%;
+
             .nav-ul {
                 font-size: 26px;
                 width: 100%;
-                
+
                 .nav-ul-li {
                     cursor: pointer;
                     line-height: 40px;
-                    
+
                     a {
-                        color:$gray-600;
+                        color: $gray-600;
                         transition: color 0.2s ease-in-out;
                         font-size: 32px;
                         box-sizing: border-box;
                         border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            border-bottom: 1px solid $gray-900;
+                            color: $gray-900;
+                            width: 100%;
+                        }
                     }
-                    a:hover {
-                        border-bottom: 1px solid $gray-900;
-                        color: $gray-900;
-                        width: 100%;
-                    }
+
                     .selected {
                         border-bottom: 1px solid $gray-900;
                         color: $gray-900;
@@ -52,14 +56,14 @@
 }
 
 @media (max-width: 1023px) {
-   .nav-main {
-    .nav-container {
-        .nav-div-ul{
-          .nav-ul{
-           align-items: end;
-          }
+    .nav-main {
+        .nav-container {
+            .nav-div-ul {
+                .nav-ul {
+                    align-items: end;
+                }
+            }
         }
     }
-   }
-   
+
 }
