@@ -22,6 +22,7 @@ const Header: FunctionComponent = () => {
     }, [selectedHeader]);
 
     return (
+        
         <>
             <nav className={`${styles['nav-main']} navbar navbar-expand-lg fixed-top`}>
                 <div className={`${styles['nav-container']} container nav-bar `}>
