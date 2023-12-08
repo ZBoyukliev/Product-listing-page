@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 
 const Loading: FunctionComponent = () => {
+    
     return (
         <div>
             <h2>Loading...</h2>
@@ -11,6 +12,7 @@ const Loading: FunctionComponent = () => {
             </div>
         </div>
     );
+    
 };
 
 export default Loading;
