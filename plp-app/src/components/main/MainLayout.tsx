@@ -1,4 +1,3 @@
-
 import { FunctionComponent, useState, useEffect, useContext } from 'react';
 import { ProductContext } from '../../context/products';
 import { ProductContextType } from '../../context/models/ContextModel';
