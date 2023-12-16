@@ -16,5 +16,4 @@ export const setPriceFilteredProducts = (data: Product[], filters: Filter) => {
   }
   
   return items;
-  
 }
