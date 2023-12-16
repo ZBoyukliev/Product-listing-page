@@ -84,7 +84,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     setFilters({ colors: [], price: 0 });
   }
 
-
   const sortProducts = (sortOption: string) => {
     setSortingOption(sortOption);
     switch (sortOption) {
@@ -102,7 +101,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         break;
     }
   };
-
 
   return (
     <ProductContext.Provider
@@ -125,4 +123,3 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     </ProductContext.Provider>
   );
 };
-
