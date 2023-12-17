@@ -79,7 +79,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
     setFilters({ ...filters, price: filters.price === price ? 0 : price });
   };
 
-
   const handleResetFilters = () => {
     setFilters({ colors: [], price: 0 });
   }
