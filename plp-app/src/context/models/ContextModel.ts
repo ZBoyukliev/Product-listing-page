@@ -3,6 +3,7 @@ import Product from '../../types/Product';
 import { Filter } from './filter';
  
 export interface ProductContextType {
+ 
   filters: Filter;
     products: Product[];
     isLoading: boolean;
@@ -15,4 +16,5 @@ export interface ProductContextType {
     handleSelectedColorsChange: (color:string) => void;
     handleMaximumPriceSelect:(price:number) => void;
     handleResetFilters: () => void;
+ 
   }
