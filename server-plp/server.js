@@ -159,8 +159,6 @@
         };
     }
 
-
-
     function composeErrorObject(code, message) {
         return JSON.stringify({
             code,
@@ -413,8 +411,6 @@
 
     const { AuthorizationError: AuthorizationError$1 } = errors;
 
-
-
     const userService = new Service_1();
 
     userService.get('me', getSelf);
@@ -457,7 +453,6 @@
         patch,
         delete: del
     };
-
 
     function validateRequest(context, tokens, query) {
         /*
@@ -513,7 +508,6 @@
             return operators[operator.toLowerCase()](prop, value);
         }
     }
-
 
     function get(context, tokens, query, body) {
         validateRequest(context, tokens);
