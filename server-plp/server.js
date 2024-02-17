@@ -69,7 +69,6 @@
 
     const { ServiceError: ServiceError$1 } = errors;
 
-
     function createHandler(plugins, services) {
         return async function handler(req, res) {
             const method = req.method;
@@ -306,7 +305,6 @@
 
     const uuid$1 = util.uuid;
 
-
     const data = fs__default['default'].existsSync('./data') ? fs__default['default'].readdirSync('./data').reduce((p, c) => {
         const content = JSON.parse(fs__default['default'].readFileSync('./data/' + c));
         const collection = c.slice(0, -5);
@@ -418,7 +416,6 @@
     userService.post('login', onLogin);
     userService.get('logout', onLogout);
 
-
     function getSelf(context, tokens, query, body) {
         if (context.user) {
             const result = Object.assign({}, context.user);
@@ -444,7 +441,6 @@
     var users = userService.parseRequest;
 
     const { NotFoundError: NotFoundError$1, RequestError: RequestError$1 } = errors;
-
 
     var crud = {
         get,
