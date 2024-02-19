@@ -836,7 +836,6 @@
             }
         }
 
-
         // Manipulation
 
         /**
@@ -999,7 +998,6 @@
         return { get, add, set, merge, delete: del, query };
     }
 
-
     function assignSystemProps(target, entry, ...rest) {
         const whitelist = [
             '_id',
@@ -1018,7 +1016,6 @@
 
         return target;
     }
-
 
     function assignClean(target, entry, ...rest) {
         const blacklist = [
@@ -1257,8 +1254,6 @@
                 }
             }
         };
-
-
 
         function getRule(action, collection, data = {}) {
             let currentRule = ruleOrDefault(true, rules['*'][action]);
