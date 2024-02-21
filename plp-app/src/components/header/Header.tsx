@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { HeaderLinks } from './models/HeaderLinks';
 
-
 const Header: FunctionComponent = () => {
 
     const contextValue = useContext<ProductContextType | null>(ProductContext);
