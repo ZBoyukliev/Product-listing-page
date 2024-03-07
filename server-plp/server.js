@@ -815,7 +815,6 @@
         };
     }
 
-
     /**
      * Create storage instance and populate with seed data
      * @param {Object=} seedData Associative array with data. Each property is an object with properties in format {key: value}
@@ -1148,7 +1147,6 @@
         };
     }
 
-
     const secret = 'This is not a production server';
 
     function hash(string) {
@@ -1313,7 +1311,6 @@
         sessions: {
         }
     };
-
 
     // -------------------------------------------------------------------------------------- //////////
 
