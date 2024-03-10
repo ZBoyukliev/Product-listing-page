@@ -4,10 +4,10 @@ import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg
 import styles from  './Footer.module.scss';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
-
 const Footer: FunctionComponent = () => {
 
   return (
+    
     <footer className={`${styles['foot-main']} text-center text-lg-start`}>
       <div className="container footer p-4">
         <div className="row">
