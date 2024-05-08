@@ -38,7 +38,6 @@ const Footer: FunctionComponent = () => {
               </li>
             </ul>
           </div>
-
           <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 className="text-uppercase">Contact</h5>
             <ul className="list-unstyled">
@@ -55,7 +54,6 @@ const Footer: FunctionComponent = () => {
           </div>
         </div>
       </div>
-
       <div className={`${styles['text-footer']} text-center p-3 bg-dark`}>
         © {new Date().getFullYear()} Product Listing Page App. All rights reserved.
       </div>
