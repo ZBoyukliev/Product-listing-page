@@ -18,7 +18,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [categoryType, setCategoryType] = useState<string>('bags');
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [sortingOptions, setSortingOption] = useState("")
-
   const [filters, setFilters] = useState<Filter>({ colors: [], price: 0 });
 
   useEffect(() => {
@@ -43,7 +42,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setProducts([]);
       });
   }, [categoryType, filters.colors, filters.price]);
-
 
   const checkFilteredItems = (data: Product[]) => {
     if (filters.colors.length > 0) {
