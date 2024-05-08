@@ -10,7 +10,6 @@ type Props = {
   onLoadMore: () => void;
 }
 
-
 const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMore }) => {
 
   const contextValue = useContext<ProductContextType | null>(ProductContext);
@@ -20,7 +19,6 @@ const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMor
   }
 
   const { products, isLoading } = contextValue;
-
   const filteredProducts = products.slice(0, visibleProducts);
 
   return (
