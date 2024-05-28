@@ -7,7 +7,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 const Footer: FunctionComponent = () => {
 
   return (
-    
     <footer className={`${styles['foot-main']} text-center text-lg-start`}>
       <div className="container footer p-4">
         <div className="row">
@@ -17,7 +16,6 @@ const Footer: FunctionComponent = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod mauris id egestas tincidunt.
             </p>
           </div>
-
           <div className={`${styles['div-icons']} col-lg-3 col-md-6 mb-4 mb-md-0`}>
             <h5 className="text-uppercase">FOLLOW US</h5>
             <ul className="list-unstyled">
