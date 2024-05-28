@@ -6,6 +6,7 @@ type Props = {
 };
 
 const RatingStars: FunctionComponent<Props> = ({ rating }) => {
+    
     const totalStars = 5;
     const fullStars = Math.floor(rating);
     let hasHalfStar = rating - fullStars >= 0.5;
