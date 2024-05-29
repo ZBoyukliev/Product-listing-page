@@ -6,7 +6,6 @@ interface CategoryComponentProps {
     visibleProducts: number;
 }
 
-
 const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleProducts }) => {
     const productContext = useContext(ProductContext);
 
