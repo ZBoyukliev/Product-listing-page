@@ -14,6 +14,5 @@ export const setPriceFilteredProducts = (data: Product[], filters: Filter) => {
   } else {
     items = data;
   }
-  
   return items;
 }
