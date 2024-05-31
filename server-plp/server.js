@@ -804,7 +804,6 @@
 
     const { uuid: uuid$2 } = util;
 
-
     function initPlugin(settings) {
         const storage = createInstance(settings.seedData);
         const protectedStorage = createInstance(settings.protectedData);
@@ -985,12 +984,10 @@
                         }
                     }
                 }
-
                 if (match) {
                     result.push(Object.assign(deepCopy(entry), { _id: key }));
                 }
             }
-
             return result;
         }
 
