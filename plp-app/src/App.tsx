@@ -7,7 +7,6 @@ import { ProductProvider } from './context/products';
 import { ToastContainer } from 'react-toastify';
 
 const App: FunctionComponent = () => {
-
   return (
     <ProductProvider>
       <section className={`${styles['wrapper']}`}>
