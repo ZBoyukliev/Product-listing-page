@@ -1730,6 +1730,7 @@
                 "price": 131.89,
                 "rating": 4,
             },
+
             "sg436770-76c5-40e2-b231-97409eda8a98": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda8a98",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1746,7 +1747,7 @@
         comments: {}
     };
 
-    // ------------------------------------------------------------------------------------------
+    // --------------------------------------------------------------
     var rules$1 = {
         users: {
             ".create": false,
@@ -1779,6 +1780,5 @@
     console.log(`Admin panel located at http://localhost:${port}/admin`);
 
     var softuniPracticeServer = {};
-
     return softuniPracticeServer;
 })));
