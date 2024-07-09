@@ -23,6 +23,7 @@ const RatingStars: FunctionComponent<Props> = ({ rating }) => {
                 stars.push(<span key={i} className={styles['star']}>&#9734;</span>);
             }
         }
+
         return stars;
     };
 
