@@ -1310,7 +1310,6 @@
     };
 
     // -------------------------------------------------------------------------------------- 
-
     var seedData = {
         items: {
 
@@ -1758,6 +1757,7 @@
             ".delete": false
         }
     };
+    
     var settings = {
         identity: identity,
         protectedData: protectedData,
