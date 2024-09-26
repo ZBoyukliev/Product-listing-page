@@ -9,7 +9,6 @@ type Props = {
 };
 
 const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
-
     return (
         <>
             <div key={product._id} className={`${styles['card-container']} col-12 col-md-6 col-xl-4 mb-4 mb-xl-0`}>
@@ -27,7 +26,6 @@ const CatalogTyleComponent: FunctionComponent<Props> = ({ product }) => {
                     </div>
                 </div>
             </div>
-
         </>
     );
 };
