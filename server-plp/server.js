@@ -1650,7 +1650,6 @@
                 "price": 99.89,
                 "rating": 5,
             },
-            
             "sg436770-76c5-40e2-b231-97409eda7a93": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a93",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1663,7 +1662,6 @@
                 "price": 89.89,
                 "rating": 4,
             },
-            
             "sg436770-76c5-40e2-b231-97409eda7a94": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a94",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1676,7 +1674,6 @@
                 "price": 109.89,
                 "rating": 4,
             },
-            
             "sg436770-76c5-40e2-b231-97409eda7a95": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a95",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1689,7 +1686,6 @@
                 "price": 129.89,
                 "rating": 5,
             },
-            
             "sg436770-76c5-40e2-b231-97409eda7a96": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a96",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1702,7 +1698,6 @@
                 "price": 111.89,
                 "rating": 4,
             },
-            
             "sg436770-76c5-40e2-b231-97409eda7a97": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a97",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1715,7 +1710,6 @@
                 "price": 111.89,
                 "rating": 5,
             },
-            
             "sg436770-76c5-40e2-b231-97409eda7a98": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda7a98",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1728,7 +1722,6 @@
                 "price": 131.89,
                 "rating": 4,
             },
-
             "sg436770-76c5-40e2-b231-97409eda8a98": {
                 "_id": "wh436770-76c5-30e2-b231-77409eda8a98",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1771,9 +1764,10 @@
     ];
 
     const server = http__default['default'].createServer(requestHandler(plugins, services));
-
     const port = 3030;
+    
     server.listen(port);
+    
     console.log(`Server started on port ${port}. You can make requests to http://localhost:${port}/`);
     console.log(`Admin panel located at http://localhost:${port}/admin`);
 
