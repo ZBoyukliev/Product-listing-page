@@ -57,6 +57,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
       } else {
         setProducts(filteredData);
       }
+      
     } else if (filters.price > 0) {
       const filteredPrceData = setPriceFilteredProducts(data, filters);
       setProducts(filteredPrceData);
@@ -120,8 +121,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         sortProducts,
         handleMaximumPriceSelect,
         handleResetFilters
-      }}
-    >
+      }}>
       {children}
     </ProductContext.Provider>
   );
