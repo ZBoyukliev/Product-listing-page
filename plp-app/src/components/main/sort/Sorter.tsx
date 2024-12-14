@@ -19,8 +19,7 @@ const SorterComponent: FunctionComponent = () => {
         <select
           className="form-select"
           id="sortingOption"
-          onChange={(e) =>sortProducts(e.target.value)}
-        >
+          onChange={(e) =>sortProducts(e.target.value)}>
           <option value={""}>Select an option</option>
           <option value={SortingOrder.NAME_ASC}>A-Z</option>
           <option value={SortingOrder.NAME_DESC}>Z-A</option>
