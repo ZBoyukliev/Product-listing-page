@@ -1346,7 +1346,7 @@
                 "description": "Some other description for the Blue-dark Bag",
                 "imageUrl": "/images/bags/bag-blue1.png",
                 "_createdOn": 1617194128643,
-                "price": 99.90,
+                "price": 109.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a64": {
@@ -1358,7 +1358,7 @@
                 "description": "Some more description for the Ches Bag",
                 "imageUrl": "/images/bags/bag-ch1.png",
                 "_createdOn": 1617194128644,
-                "price": 99.90,
+                "price": 95.90,
                 "discountPrice": 40.00,
                 "rating": 3,
             },
@@ -1371,7 +1371,7 @@
                 "description": "Some description plus others for the Grat-dark Bag",
                 "imageUrl": "/images/bags/bag-gray.png",
                 "_createdOn": 1617194128645,
-                "price": 76.90,
+                "price": 86.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
