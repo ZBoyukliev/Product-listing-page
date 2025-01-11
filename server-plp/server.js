@@ -1358,8 +1358,8 @@
                 "description": "Some more description for the Ches Bag",
                 "imageUrl": "/images/bags/bag-ch1.png",
                 "_createdOn": 1617194128644,
-                "price": 95.90,
-                "discountPrice": 40.00,
+                "price": 97.90,
+                "discountPrice": 41.00,
                 "rating": 3,
             },
             "fd436770-76c5-40e2-b231-77409eda7a65": {
@@ -1371,7 +1371,7 @@
                 "description": "Some description plus others for the Grat-dark Bag",
                 "imageUrl": "/images/bags/bag-gray.png",
                 "_createdOn": 1617194128645,
-                "price": 86.90,
+                "price": 87.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
@@ -1383,8 +1383,8 @@
                 "description": "Some description for the LV Bag",
                 "imageUrl": "/images/bags/bag-lv.png",
                 "_createdOn": 1617194128646,
-                "price": 76.90,
-                "rating": 4,
+                "price": 78.90,
+                "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a67": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a67",
