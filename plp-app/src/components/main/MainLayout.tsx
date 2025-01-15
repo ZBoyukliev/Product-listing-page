@@ -18,7 +18,6 @@ const MainComponent: FunctionComponent = () => {
   }, [contextValue?.categoryType]);
 
   const handleLoadMore = () => {
-    
     setVisibleProducts((prevVisibleProducts) =>
       Math.min(prevVisibleProducts + 6, contextValue?.products.length || 0)
     );
