@@ -15,6 +15,7 @@ const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMor
   const contextValue = useContext<ProductContextType | null>(ProductContext);
 
   if (!contextValue) return <div>No products available</div>
+  
   const { products, isLoading } = contextValue;
   const filteredProducts = products.slice(0, visibleProducts);
 
