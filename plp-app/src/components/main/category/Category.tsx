@@ -7,6 +7,7 @@ interface CategoryComponentProps {
 }
 
 const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleProducts }) => {
+    
     const productContext = useContext(ProductContext);
 
     if (!productContext) return <div>Loading...</div>
