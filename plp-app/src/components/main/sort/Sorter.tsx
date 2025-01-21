@@ -4,6 +4,7 @@ import { SortingOrder } from '../../../context/models/SortingOrder';
 import { ProductContextType } from '../../../context/models/ContextModel';
 
 const SorterComponent: FunctionComponent = () => {
+  
   const productContext = useContext<ProductContextType | null>(ProductContext);
 
   if (!productContext) {
