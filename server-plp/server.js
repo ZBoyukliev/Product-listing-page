@@ -400,7 +400,6 @@
     dataService.patch(':collection', actions.patch);
     dataService.delete(':collection', actions.delete);
 
-
     var jsonstore = dataService.parseRequest;
 
     /*
@@ -715,6 +714,7 @@
      */
 
     const dataService$1 = new Service_1();
+    
     dataService$1.get(':collection', crud.get);
     dataService$1.post(':collection', crud.post);
     dataService$1.put(':collection', crud.put);
