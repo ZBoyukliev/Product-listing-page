@@ -1483,7 +1483,7 @@
                 "description": "Shoe description for the Barbie shoes",
                 "imageUrl": "/images/shoes/shoes-pink.png",
                 "_createdOn": 2617194128607,
-                "price": 112.99,
+                "price": 109.99,
                 "rating": 4,
             },
 
@@ -1497,7 +1497,7 @@
                 "description": "Watches 101 description for the g1 watch",
                 "imageUrl": "/images/watches/watch1.png",
                 "_createdOn": 2617194128621,
-                "price": 212.99,
+                "price": 214.99,
                 "discountPrice": 200.00,
                 "rating": 5,
             },
@@ -1510,7 +1510,7 @@
                 "description": "Watches 101 description for the black-g watch",
                 "imageUrl": "/images/watches/watch2.png",
                 "_createdOn": 2617194128622,
-                "price": 320.99,
+                "price": 310.99,
                 "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a03": {
@@ -1522,7 +1522,7 @@
                 "description": "Watches 101 description for the gray watch",
                 "imageUrl": "/images/watches/watch3.png",
                 "_createdOn": 2617194128623,
-                "price": 280.89,
+                "price": 270.89,
                 "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a04": {
@@ -1534,7 +1534,7 @@
                 "description": "Watches 110 description for the n4 watch",
                 "imageUrl": "/images/watches/watch4.png",
                 "_createdOn": 2617194128624,
-                "price": 250.89,
+                "price": 240.89,
                 "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a05": {
@@ -1546,7 +1546,7 @@
                 "description": "Watches 198 description for the golden watch",
                 "imageUrl": "/images/watches/watch5.png",
                 "_createdOn": 2617194128625,
-                "price": 350.89,
+                "price": 340.89,
                 "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a06": {
