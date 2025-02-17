@@ -26,14 +26,12 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
 
     fetch(`http://localhost:3030/data/items?where=category%3D%22${categoryType}%22`)
       .then((response) => {
-        
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         setIsLoading(false);
         return response.json();
       })
-      
       .then((data: Product[]) => {
         setProducts(data);
         checkFilteredItems(data);
@@ -44,7 +42,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
         setErr(error);
         setProducts([]);
       });
-    
   }, [categoryType, filters.colors, filters.price]);
 
   const checkFilteredItems = (data: Product[]) => {
@@ -72,7 +69,6 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   };
 
   const handleSelectedColorsChange = (color: string) => {
-    
     if (filters.colors.includes(color)) {
       const updatedColors = filters.colors.filter(c => c !== color);
       setFilters({ ...filters, colors: updatedColors });
