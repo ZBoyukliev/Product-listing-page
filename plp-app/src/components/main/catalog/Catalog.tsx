@@ -13,7 +13,6 @@ type Props = {
 const CatalogComponent: FunctionComponent<Props> = ({ visibleProducts, onLoadMore }) => {
 
   const contextValue = useContext<ProductContextType | null>(ProductContext);
-
   if (!contextValue) return <div>No products available</div>
   
   const { products, isLoading } = contextValue;
