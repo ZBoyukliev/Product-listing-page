@@ -45,17 +45,14 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   }, [categoryType, filters.colors, filters.price]);
 
   const checkFilteredItems = (data: Product[]) => {
-    
     if (filters.colors.length > 0) {
       const filteredData = data.filter((product) => filters.colors.find((color) => product.color === color));
-      
       if (filters.price > 0) {
         const filteredPrceData = setPriceFilteredProducts(filteredData, filters);
         setProducts(filteredPrceData);
       } else {
         setProducts(filteredData);
       }
-      
     } else if (filters.price > 0) {
       const filteredPrceData = setPriceFilteredProducts(data, filters);
       setProducts(filteredPrceData);
