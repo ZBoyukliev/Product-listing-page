@@ -1321,7 +1321,7 @@
                 "description": "Some description for the Black Bag",
                 "imageUrl": "/images/bags/bag-black.png",
                 "_createdOn": 1617194128641,
-                "price": 109.99,
+                "price": 107.99,
                 "discountPrice": 39.90,
                 "rating": 4,
             },
@@ -1334,7 +1334,7 @@
                 "description": "Some description for the GrayX Bag 123",
                 "imageUrl": "/images/bags/bag-gray1.png",
                 "_createdOn": 1617194128642,
-                "price": 89.90,
+                "price": 93.90,
                 "rating": 4,
             },
             "fd436770-76c5-40e2-b231-77409eda7a63": {
@@ -1346,7 +1346,7 @@
                 "description": "Some other description for the Blue-dark Bag",
                 "imageUrl": "/images/bags/bag-blue1.png",
                 "_createdOn": 1617194128643,
-                "price": 109.90,
+                "price": 111.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a65": {
