@@ -8,6 +8,7 @@ type Props = {
 }
 
 const FilterComponent: FunctionComponent<Props> = ({ onCloseFilters }) => {
+  
   const productContext = useContext<ProductContextType | null>(ProductContext);
   if (!productContext) {
     return <div>Loading...</div>;
