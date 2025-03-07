@@ -1331,10 +1331,10 @@
                 "title": "GrayX Bag",
                 "category": "bags",
                 "color": "gray",
-                "description": "Some description for the GrayX Bag 123",
+                "description": "Some description for the GrayX Bag",
                 "imageUrl": "/images/bags/bag-gray1.png",
                 "_createdOn": 1617194128642,
-                "price": 93.90,
+                "price": 94.90,
                 "rating": 4,
             },
             "fd436770-76c5-40e2-b231-77409eda7a63": {
@@ -1422,7 +1422,7 @@
                 "description": "Shoe description for the Red shoes",
                 "imageUrl": "/images/shoes/shoes-red1.png",
                 "_createdOn": 2617194128602,
-                "price": 88.70,
+                "price": 87.70,
                 "rating": 4,
             },
             "sh436770-76c5-40e2-b231-77409eda7a03": {
