@@ -1358,7 +1358,7 @@
                 "description": "Some description plus others for the Grat-dark Bag",
                 "imageUrl": "/images/bags/bag-gray.png",
                 "_createdOn": 1617194128645,
-                "price": 91.90,
+                "price": 92.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
@@ -1370,7 +1370,7 @@
                 "description": "Some description for the LV Bag",
                 "imageUrl": "/images/bags/bag-lv.png",
                 "_createdOn": 1617194128646,
-                "price": 79.90,
+                "price": 81.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a67": {
@@ -1382,7 +1382,7 @@
                 "description": "Some more description for the Orange Bag",
                 "imageUrl": "/images/bags/bag-orange.png",
                 "_createdOn": 1617194128647,
-                "price": 77.90,
+                "price": 78.90,
                 "discountPrice": 50.00,
                 "rating": 5,
             },
@@ -1395,7 +1395,7 @@
                 "description": "Some more description for the R1 Bag",
                 "imageUrl": "/images/bags/bags-RR1.png",
                 "_createdOn": 1617194128648,
-                "price": 54.90,
+                "price": 64.90,
                 "rating": 4,
             },
             
