@@ -1473,6 +1473,19 @@
                 "price": 109.99,
                 "rating": 4,
             },
+            
+            "sh436770-76c5-40e2-b231-77409eda7a17": {
+                "_id": "ch436770-76c5-40e2-b231-77409eda7a17",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Barbie shoes",
+                "category": "shoes",
+                "color": "pink",
+                "description": "Shoe description for the Barbie shoes",
+                "imageUrl": "/images/shoes/shoes-pink.png",
+                "_createdOn": 2617194128607,
+                "price": 119.99,
+                "rating": 5,
+            },
 
             // WATCHES --------------------------------------------
             "wt436770-76c5-40e2-b231-77409eda7a01": {
@@ -1485,7 +1498,7 @@
                 "imageUrl": "/images/watches/watch1.png",
                 "_createdOn": 2617194128621,
                 "price": 214.99,
-                "discountPrice": 200.00,
+                "discountPrice": 190.00,
                 "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a02": {
@@ -1533,7 +1546,7 @@
                 "description": "Watches 198 description for the golden watch",
                 "imageUrl": "/images/watches/watch5.png",
                 "_createdOn": 2617194128625,
-                "price": 340.89,
+                "price": 349.89,
                 "rating": 4,
             },
             "wt436770-76c5-40e2-b231-77409eda7a06": {
