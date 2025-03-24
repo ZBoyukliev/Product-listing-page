@@ -3,10 +3,8 @@
 
 .nav-main {
     background: linear-gradient(to right, rgba($primary, 1), rgba($secondary, 1));
-
     .nav-container {
         width: 100%;
-
         a {
             width: 20%;
             img {
@@ -15,31 +13,26 @@
                 object-fit: cover;
             }
         }
-
         .nav-div-ul {
             width: 100%;
             .nav-ul {
                 font-size: 26px;
                 width: 100%;
-
                 .nav-ul-li {
                     cursor: pointer;
                     line-height: 40px;
-
                     a {
                         color: $gray-600;
                         transition: color 0.2s ease-in-out;
                         font-size: 32px;
                         box-sizing: border-box;
                         border-bottom: 1px solid transparent;
-
                         &:hover {
                             border-bottom: 1px solid $gray-900;
                             color: $gray-900;
                             width: 100%;
                         }
                     }
-
                     .selected {
                         border-bottom: 1px solid $gray-900;
                         color: $gray-900;
@@ -47,7 +40,6 @@
                     }
                 }
             }
-
         }
     }
 }
