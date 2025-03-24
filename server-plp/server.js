@@ -1346,7 +1346,7 @@
                 "description": "Some other description for the Blue-dark Bag",
                 "imageUrl": "/images/bags/bag-blue1.png",
                 "_createdOn": 1617194128643,
-                "price": 111.90,
+                "price": 107.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a65": {
@@ -1358,7 +1358,7 @@
                 "description": "Some description plus others for the Grat-dark Bag",
                 "imageUrl": "/images/bags/bag-gray.png",
                 "_createdOn": 1617194128645,
-                "price": 92.90,
+                "price": 93.90,
                 "rating": 5,
             },
             "fd436770-76c5-40e2-b231-77409eda7a66": {
@@ -1395,7 +1395,7 @@
                 "description": "Some more description for the R1 Bag",
                 "imageUrl": "/images/bags/bags-RR1.png",
                 "_createdOn": 1617194128648,
-                "price": 64.90,
+                "price": 63.90,
                 "rating": 4,
             },
             
@@ -1422,7 +1422,7 @@
                 "description": "Shoe description for the Red shoes",
                 "imageUrl": "/images/shoes/shoes-red1.png",
                 "_createdOn": 2617194128602,
-                "price": 87.70,
+                "price": 89.70,
                 "rating": 4,
             },
             "sh436770-76c5-40e2-b231-77409eda7a03": {
