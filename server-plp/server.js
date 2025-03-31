@@ -1596,19 +1596,7 @@
                 "_createdOn": 2617194128629,
                 "price": 141.89,
                 "rating": 4,
-            },
-            "wt436770-76c5-40e2-b231-77409eda7a90": {
-                "_id": "wh436770-76c5-40e2-b231-77409eda7a90",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "nsx2-watch",
-                "category": "watches",
-                "color": "gray",
-                "description": "Watches 888 description for the nsx2 watch",
-                "imageUrl": "/images/watches/watch10.png",
-                "_createdOn": 2617194128690,
-                "price": 140.89,
-                "rating": 5,
-            },
+            }
             
             // SUNGLASSES--------------------------------------------
             "sg436770-76c5-40e2-b231-97409eda7a91": {
@@ -1706,19 +1694,7 @@
                 "_createdOn": 2618494128694,
                 "price": 131.89,
                 "rating": 4,
-            },
-            "sg436770-76c5-40e2-b231-97409eda8a98": {
-                "_id": "wh436770-76c5-30e2-b231-77409eda8a98",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "gray-one3",
-                "category": "sunglasses",
-                "color": "gray",
-                "description": "Gray  120 description for the protect ",
-                "imageUrl": "/images/sunglasses/img8.jpg",
-                "_createdOn": 2618584128694,
-                "price": 111.89,
-                "rating": 4,
-            },
+            }
         },
         comments: {}
     };
