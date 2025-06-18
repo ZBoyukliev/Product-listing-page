@@ -1386,18 +1386,6 @@
                 "discountPrice": 50.00,
                 "rating": 5,
             },
-            "fd436770-76c5-40e2-b231-77409eda7a68": {
-                "_id": "ff436770-76c5-40e2-b231-77409eda7a68",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "R1 Bag",
-                "category": "bags",
-                "color": "pink",
-                "description": "Some more description for the R1 Bag",
-                "imageUrl": "/images/bags/bags-RR1.png",
-                "_createdOn": 1617194128648,
-                "price": 63.90,
-                "rating": 4,
-            },
             
             // SHOES---------------------------------------------------
             "sh436770-76c5-40e2-b231-77409eda7a01": {
