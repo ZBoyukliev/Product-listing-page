@@ -10,7 +10,6 @@ interface ProductProviderProps {
 }
 
 export const ProductContext = createContext<ProductContextType | null>(null);
-
 export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -21,9 +20,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [filters, setFilters] = useState<Filter>({ colors: [], price: 0 });
 
   useEffect(() => {
-    
     setIsLoading(true); 
-
     fetch(`http://localhost:3030/data/items?where=category%3D%22${categoryType}%22`)
       .then((response) => {
         if (!response.ok) {
