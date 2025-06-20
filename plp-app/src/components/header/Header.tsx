@@ -9,13 +9,10 @@ const Header: FunctionComponent = () => {
 
     const contextValue = useContext<ProductContextType | null>(ProductContext);
     const [selectedHeader, setSelectedHeader] = useState<HeaderLinks>(HeaderLinks.BAGS);
-
     if (!contextValue) {
         return <div>Loading...</div>;
     }
-
     const { changeCategoryType } = contextValue;
-
     useEffect(() => {
         changeCategoryType(selectedHeader)
     }, [selectedHeader]);
