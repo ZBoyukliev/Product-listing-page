@@ -1448,20 +1448,7 @@
                 "_createdOn": 2617194128606,
                 "price": 129.99,
                 "rating": 5,
-            },
-            "sh436770-76c5-40e2-b231-77409eda7a07": {
-                "_id": "ch436770-76c5-40e2-b231-77409eda7a07",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "Barbie shoes",
-                "category": "shoes",
-                "color": "pink",
-                "description": "Shoe description for the Barbie shoes",
-                "imageUrl": "/images/shoes/shoes-pink.png",
-                "_createdOn": 2617194128607,
-                "price": 119.99,
-                "rating": 4,
-            },
-            
+            }, 
             "sh436770-76c5-40e2-b231-77409eda7a17": {
                 "_id": "ch436770-76c5-40e2-b231-77409eda7a17",
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
