@@ -1410,7 +1410,7 @@
                 "description": "Shoe description for the Red shoes",
                 "imageUrl": "/images/shoes/shoes-red1.png",
                 "_createdOn": 2617194128602,
-                "price": 89.70,
+                "price": 97.70,
                 "rating": 4,
             },
             "sh436770-76c5-40e2-b231-77409eda7a03": {
@@ -1422,7 +1422,7 @@
                 "imageUrl": "/images/shoes/shoes-black-p.png",
                 "_createdOn": 2617194128603,
                 "price": 120.99,
-                "discountPrice": 70.00,
+                "discountPrice": 72.00,
                 "rating": 4,
             },
             "sh436770-76c5-40e2-b231-77409eda7a05": {
@@ -1473,7 +1473,7 @@
                 "imageUrl": "/images/watches/watch1.png",
                 "_createdOn": 2617194128621,
                 "price": 214.99,
-                "discountPrice": 190.00,
+                "discountPrice": 187.00,
                 "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a02": {
