@@ -1325,18 +1325,6 @@
                 "discountPrice": 39.90,
                 "rating": 4,
             },
-            "fd436770-76c5-40e2-b231-77409eda7a62": {
-                "_id": "ff436770-76c5-42e2-b231-77409eda7a62",
-                "_ownerId": "35c62d76-8752-4626-8712-eeb96381bea8",
-                "title": "GrayX Bag",
-                "category": "bags",
-                "color": "gray",
-                "description": "Some description for the GrayX Bag",
-                "imageUrl": "/images/bags/bag-gray1.png",
-                "_createdOn": 1617194128642,
-                "price": 99.90,
-                "rating": 5,
-            },
             "fd436770-76c5-40e2-b231-77409eda7a63": {
                 "_id": "ff436770-76c5-40e2-b231-77409eda7a63",
                 "_ownerId": "35c62d66-8152-4626-8712-eeb96381bea8",
