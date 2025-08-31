@@ -1521,7 +1521,7 @@
                 "description": "Watches 891 description for the g-2 watch",
                 "imageUrl": "/images/watches/watch6.png",
                 "_createdOn": 2617194128626,
-                "price": 180.89,
+                "price": 171.89,
                 "rating": 3,
             },
             "wt436770-76c5-40e2-b231-77409eda7a07": {
@@ -1533,7 +1533,7 @@
                 "description": "Watches 128 description for the e-watch watch",
                 "imageUrl": "/images/watches/watch7.png",
                 "_createdOn": 2617194128627,
-                "price": 160.89,
+                "price": 161.89,
                 "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a08": {
@@ -1545,7 +1545,7 @@
                 "description": "Watches 329 description for the n-watch watch",
                 "imageUrl": "/images/watches/watch8.png",
                 "_createdOn": 2617194128628,
-                "price": 140.89,
+                "price": 149.89,
                 "rating": 5,
             },
             "wt436770-76c5-40e2-b231-77409eda7a09": {
@@ -1557,7 +1557,7 @@
                 "description": "Watches 1781 description for the nsx watch",
                 "imageUrl": "/images/watches/watch-9.png",
                 "_createdOn": 2617194128629,
-                "price": 141.89,
+                "price": 145.89,
                 "rating": 4,
             }
             
@@ -1571,7 +1571,7 @@
                 "description": "Sunglasses 888 description for the sun-protect ",
                 "imageUrl": "/images/sunglasses/sun1.png",
                 "_createdOn": 2618494128691,
-                "price": 80.89,
+                "price": 89.89,
                 "rating": 5,
             },
             "sg436770-76c5-40e2-b231-97409eda7a92": {
@@ -1607,7 +1607,7 @@
                 "description": "Yellow  120 description for the red-protect ",
                 "imageUrl": "/images/sunglasses/sunglasses-yellow.png",
                 "_createdOn": 2618494128694,
-                "price": 109.89,
+                "price": 119.89,
                 "rating": 4,
             },
             "sg436770-76c5-40e2-b231-97409eda7a95": {
