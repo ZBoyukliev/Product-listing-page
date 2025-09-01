@@ -10,7 +10,6 @@ const CategoryComponent: FunctionComponent<CategoryComponentProps> = ({ visibleP
     
     const productContext = useContext(ProductContext);
     if (!productContext) return <div>Loading...</div>
-
     const { categoryType, products } = productContext;
     const displayedProductsCount = products.length;
 
