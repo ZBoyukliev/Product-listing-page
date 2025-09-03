@@ -1547,18 +1547,6 @@
                 "_createdOn": 2617194128628,
                 "price": 149.89,
                 "rating": 5,
-            },
-            "wt436770-76c5-40e2-b231-77409eda7a09": {
-                "_id": "wh436770-76c5-40e2-b231-77409eda7a09",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "nsx-watch",
-                "category": "watches",
-                "color": "gray",
-                "description": "Watches 1781 description for the nsx watch",
-                "imageUrl": "/images/watches/watch-9.png",
-                "_createdOn": 2617194128629,
-                "price": 145.89,
-                "rating": 4,
             }
             
             // SUNGLASSES--------------------------------------------
