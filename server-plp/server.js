@@ -1609,18 +1609,6 @@
                 "_createdOn": 2618494128694,
                 "price": 129.89,
                 "rating": 5,
-            },
-            "sg436770-76c5-40e2-b231-97409eda7a96": {
-                "_id": "wh436770-76c5-30e2-b231-77409eda7a96",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "green-one",
-                "category": "sunglasses",
-                "color": "green",
-                "description": "Green  120 description for the hreen-protect ",
-                "imageUrl": "/images/sunglasses/sun6.jpg",
-                "_createdOn": 2618494128694,
-                "price": 111.89,
-                "rating": 4,
             }
         },
         comments: {}
