@@ -1535,18 +1535,6 @@
                 "_createdOn": 2617194128627,
                 "price": 161.89,
                 "rating": 5,
-            },
-            "wt436770-76c5-40e2-b231-77409eda7a08": {
-                "_id": "wh436770-76c5-40e2-b231-77409eda7a08",
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "n-watch",
-                "category": "watches",
-                "color": "black",
-                "description": "Watches 329 description for the n-watch watch",
-                "imageUrl": "/images/watches/watch8.png",
-                "_createdOn": 2617194128628,
-                "price": 149.89,
-                "rating": 5,
             }
             
             // SUNGLASSES--------------------------------------------
